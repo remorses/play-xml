@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        // "types": ["src/global.d.ts"],
+        "jsx": "react",
+        
+        "jsxFactory": "JSXXML",
+        "moduleResolution": "Node",
+        "esModuleInterop": true,
+        "outDir": "dist"
+    }
+}
