@@ -1,7 +1,3 @@
-
-
-
-
 # Clips
 
 ## Set clip duration and offset
@@ -25,10 +21,12 @@ You can use the start prop to select the start of the source video you want to m
 Clips are put by default one after the other
 
 ```jsx
-<Clip ref={VIDEO_ID} duration={1} />
-<Clip ref={VIDEO_ID} duration={1} />
-<Clip ref={VIDEO_ID} duration={1} />
-<Clip ref={VIDEO_ID} duration={1} />
+<spine lane='-3'>
+    <Clip ref={VIDEO_ID} duration={1} />
+    <Clip ref={VIDEO_ID} duration={1} />
+    <Clip ref={VIDEO_ID} duration={1} />
+    <Clip ref={VIDEO_ID} duration={1} />
+</spine>
 ```
 
 ## Layer clips one above the other
@@ -39,5 +37,18 @@ To start come clips with same offset as another clip A, put the clips as childre
 <Clip ref={VIDEO_ID} duration={1}>
     <Clip lane='-1' ref={VIDEO_ID} duration={1} offset={1} />
     <Clip lane='-2' ref={VIDEO_ID} duration={1} offset={2} />
+</Clip>
+```
+
+## Sequence of clips, children of clip
+
+```jsx
+<Clip ref={VIDEO_ID} duration={1}>
+    <Clip lane='-1' ref={VIDEO_ID} duration={1} offset={1} />
+    <spine lane='-2'>
+        <Clip ref={AUDIO_ID} duration={1} />
+        <Clip ref={AUDIO_ID} duration={1} />
+        <Clip ref={AUDIO_ID} duration={1} />
+    </spine>
 </Clip>
 ```

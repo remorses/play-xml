@@ -1,6 +1,7 @@
 import { Fragment, JSXXML } from 'jsx-xml'
 import { omitBy, isUndefined } from 'lodash'
 import * as uuid from 'uuid'
+import { formatDuration, formatBoolean } from './support'
 
 /*
 start and end are applied to the asset video, specifying the region of the source video
@@ -41,12 +42,7 @@ export const Clip = ({
     )
 }
 
-function formatBoolean(bool) {
-    return bool ? '1' : '0'
-}
-function formatDuration(d) {
-    return d ? `${d}s` : d
-}
+
 
 export const Asset = ({
     id,
@@ -63,7 +59,7 @@ export const Asset = ({
 }) => {
     // TODO try using an audio asset
     const formatId = 'r' + uuid.v4().replace(/-/g, '').slice(0, 2)
-    // TODO make one format common for all the clips with same format (width, height, fpz, definition) 
+    // TODO make one format common for all the clips with same format (width, height, fpz, definition)
     return (
         <Fragment>
             <format id={formatId} name={formatName + fps} />

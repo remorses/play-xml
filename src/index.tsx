@@ -5,6 +5,7 @@ import { Asset, Clip } from './clip'
 
 const Example = ({}) => {
     const VIDEO_ID = 'vid'
+    const AUDIO_ID = 'aud'
     return (
         <fcpxml version='1.8'>
             <resources>
@@ -17,6 +18,7 @@ const Example = ({}) => {
                     colorSpace='1-1-1 (Rec. 709)'
                 />
                 <Asset id={VIDEO_ID} src='./video.mp4' start={0} duration={5} />
+                <Asset id={AUDIO_ID} src='./audio.wav' start={0} duration={5} />
             </resources>
 
             <event name='Demo Title of project'>
@@ -25,8 +27,24 @@ const Example = ({}) => {
                         <spine>
                             <Clip ref={VIDEO_ID} duration={1} />
                             <Clip offset={2} ref={VIDEO_ID} duration={1}>
-                                <Clip offset={2} lane='-1' ref={VIDEO_ID} duration={1} />
+                                <Clip
+                                    offset={2}
+                                    lane='-1'
+                                    ref={VIDEO_ID}
+                                    duration={1}
+                                />
                                 <Clip lane='-2' ref={VIDEO_ID} duration={1} />
+                                <spine lane='-3'>
+                                    <Clip ref={AUDIO_ID} duration={0.1} />
+                                    <Clip ref={AUDIO_ID} duration={0.1} />
+                                    <Clip ref={AUDIO_ID} duration={0.1} />
+                                    <Clip ref={AUDIO_ID} duration={0.1} />
+                                    <Clip ref={AUDIO_ID} duration={0.1} />
+                                    <Clip ref={AUDIO_ID} duration={0.1} />
+                                    <Clip ref={AUDIO_ID} duration={0.1} />
+                                    <Clip ref={AUDIO_ID} duration={0.1} />
+                                    <Clip ref={AUDIO_ID} duration={0.1} />
+                                </spine>
                             </Clip>
                             <Clip ref={VIDEO_ID} duration={1} />
                             <Clip ref={VIDEO_ID} duration={1} />
