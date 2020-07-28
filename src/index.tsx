@@ -1,8 +1,22 @@
 import fs from 'fs'
-import { render, JSXXML } from 'jsx-xml'
+import { render, JSXXML, JSXNode } from 'jsx-xml'
 import { Wrapper } from './project'
 import { Asset, Clip, SimpleTransition } from './clip'
 import { Beats } from './time'
+
+// TODO make a Parallel element that makes some clips parallel (making the first clip the parent and other clips children)
+// TODO make Spine sequence that makes clips sequential
+
+export const Parallel = ({ children }) => {
+    if (!children || children.length == 0) {
+        return null
+    }
+    const FirstClip = children[0]
+    if (FirstClip.type.isClip) {
+        return JSXXML(FirstClip.type, FirstClip.props, children.slice(1))
+    }
+    return <clip duration=''></clip>
+}
 
 const Example = ({}) => {
     const VIDEO_PATH = './video.mp4'
@@ -33,40 +47,9 @@ const Example = ({}) => {
             <event name='Demo Title of project'>
                 <project name='Demo Title of project'>
                     <sequence format='r1' duration='10s'>
-                        <spine>
-                            <Clip mute src={VIDEO_PATH} duration={1} />
-                            <Clip
-                                mute
-                                offset={2}
-                                src={VIDEO_PATH}
-                                duration={1}
-                            >
-                                <Clip
-                                    offset={2}
-                                    lane='-1'
-                                    src={VIDEO_PATH}
-                                    duration={1}
-                                />
-                                <Clip
-                                    lane='-2'
-                                    src={VIDEO_PATH}
-                                    duration={1}
-                                />
-                                <spine lane='-3'>
-                                    {Array(10)
-                                        .fill(0)
-                                        .map((_) => (
-                                            <Clip
-                                                src={AUDIO_PATH}
-                                                duration={Beats(1 / 8)}
-                                            />
-                                        ))}
-                                </spine>
-                            </Clip>
-                            <Clip src={VIDEO_PATH} duration={1} />
-                            <SimpleTransition offset={0.1} videoRef={TRANSITION_REF} />
-                            <Clip src={VIDEO_PATH} duration={1} />
-                            <Clip src={VIDEO_PATH} duration={1} />
+                        <spine lane='0'>
+                            <Clip mute lane='0' src={VIDEO_PATH} duration={1} />
+                            <Clip mute lane='0' src={VIDEO_PATH}  />
                         </spine>
                     </sequence>
                 </project>

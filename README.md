@@ -4,8 +4,10 @@
 
 Offset is relative to the parent clip
 
+Duration is by default the total video duration
+
 ```jsx
-<Clip ref={VIDEO_ID} start={3} offset={4} />
+<Clip ref={VIDEO_ID} duration={3} offset={4} />
 ```
 
 ## Select source video

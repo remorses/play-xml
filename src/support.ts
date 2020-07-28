@@ -6,5 +6,5 @@ export function formatBoolean(bool) {
 
 export function pathToRef(p: string) {
     // TODO if we do path.resolve the current cwd must be the output xml file directory
-    return 'r' + Buffer.from(path.normalize(p)).toString('base64')
+    return 'r' + Buffer.from(path.normalize(p)).toString('hex')
 }
