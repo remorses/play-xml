@@ -34,22 +34,22 @@ const Example = ({}) => {
                 <project name='Demo Title of project'>
                     <sequence format='r1' duration='10s'>
                         <spine>
-                            <Clip mute path={VIDEO_PATH} duration={1} />
+                            <Clip mute src={VIDEO_PATH} duration={1} />
                             <Clip
                                 mute
                                 offset={2}
-                                path={VIDEO_PATH}
+                                src={VIDEO_PATH}
                                 duration={1}
                             >
                                 <Clip
                                     offset={2}
                                     lane='-1'
-                                    path={VIDEO_PATH}
+                                    src={VIDEO_PATH}
                                     duration={1}
                                 />
                                 <Clip
                                     lane='-2'
-                                    path={VIDEO_PATH}
+                                    src={VIDEO_PATH}
                                     duration={1}
                                 />
                                 <spine lane='-3'>
@@ -57,16 +57,16 @@ const Example = ({}) => {
                                         .fill(0)
                                         .map((_) => (
                                             <Clip
-                                                path={AUDIO_PATH}
+                                                src={AUDIO_PATH}
                                                 duration={Beats(1 / 8)}
                                             />
                                         ))}
                                 </spine>
                             </Clip>
-                            <Clip path={VIDEO_PATH} duration={1} />
+                            <Clip src={VIDEO_PATH} duration={1} />
                             <SimpleTransition offset={0.1} videoRef={TRANSITION_REF} />
-                            <Clip path={VIDEO_PATH} duration={1} />
-                            <Clip path={VIDEO_PATH} duration={1} />
+                            <Clip src={VIDEO_PATH} duration={1} />
+                            <Clip src={VIDEO_PATH} duration={1} />
                         </spine>
                     </sequence>
                 </project>

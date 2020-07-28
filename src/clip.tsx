@@ -14,7 +14,7 @@ to use end on a clip you must specify end to the asset
 */
 export const Clip = ({
     name = 'Untitled',
-    path,
+    src,
     start = undefined,
     duration,
     offset = undefined,
@@ -37,7 +37,7 @@ export const Clip = ({
     )
 
     return (
-        <asset-clip tcFormat='NDF' {...props} {...rest} ref={pathToRef(path)}>
+        <asset-clip tcFormat='NDF' {...props} {...rest} ref={pathToRef(src)}>
             {mute && <adjust-volume amount='-96dB' />}
             {children}
             {/* <filter-video ref='r5' name='Color Correction'>
@@ -85,7 +85,6 @@ export const Asset = ({
     start,
     duration,
     hasVideo = true,
-
     hasAudio = false,
     formatName = 'FFVideoFormat1080p',
     audioSources = true,
