@@ -63,6 +63,7 @@ export const Asset = ({
 }) => {
     // TODO try using an audio asset
     const formatId = 'r' + uuid.v4().replace(/-/g, '').slice(0, 2)
+    // TODO make one format common for all the clips with same format (width, height, fpz, definition) 
     return (
         <Fragment>
             <format id={formatId} name={formatName + fps} />
