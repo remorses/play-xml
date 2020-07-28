@@ -2,16 +2,20 @@
 <fcpxml version="1.8">
   <resources>
     <format id="r1" name="FFVideoFormat720p60" frameDuration="100/6000s" width="1280" height="720" colorSpace="1-1-1 (Rec. 709)"/>
-    <format id="rca" name="FFVideoFormat1080p25"/>
-    <asset id="vid" src="./video.mp4" start="0s" duration="5s" hasVideo="1" hasAudio="0" format="rca" audioSources="1" audioChannels="2" audioRate="44100"/>
-    <format id="r6b" name="FFVideoFormat1080p25"/>
-    <asset id="aud" src="./audio.wav" start="0s" duration="5s" hasVideo="1" hasAudio="0" format="r6b" audioSources="1" audioChannels="2" audioRate="44100"/>
+    <format id="r75" name="FFVideoFormat1080p25"/>
+    <asset id="vid" src="./video.mp4" start="0s" duration="5s" hasVideo="1" hasAudio="0" format="r75" audioSources="1" audioChannels="2" audioRate="44100"/>
+    <format id="rbf" name="FFVideoFormat1080p25"/>
+    <asset id="aud" src="./audio.wav" start="0s" duration="5s" hasVideo="1" hasAudio="0" format="rbf" audioSources="1" audioChannels="2" audioRate="44100"/>
   </resources>
   <event name="Demo Title of project">
     <project name="Demo Title of project">
       <sequence format="r1" duration="10s">
         <spine>
-          <asset-clip tcFormat="NDF" name="Untitled" ref="vid" duration="1s" audioRole="dialogue"/>
+          <asset-clip tcFormat="NDF" name="Untitled" ref="vid" duration="1s" audioRole="dialogue">
+            <audio-channel-source srcCh="2, 1">
+              <mute duration="1"/>
+            </audio-channel-source>
+          </asset-clip>
           <asset-clip tcFormat="NDF" name="Untitled" ref="vid" duration="1s" offset="2s" audioRole="dialogue">
             <asset-clip tcFormat="NDF" name="Untitled" ref="vid" duration="1s" offset="2s" audioRole="dialogue" lane="-1"/>
             <asset-clip tcFormat="NDF" name="Untitled" ref="vid" duration="1s" audioRole="dialogue" lane="-2"/>

@@ -20,6 +20,7 @@ export const Clip = ({
     audioRole = 'dialogue',
     offset = undefined,
     format,
+    mute = false, // TODO mute does not work on parent clips
     children = null,
     ...rest
 }: any) => {
@@ -38,6 +39,11 @@ export const Clip = ({
 
     return (
         <asset-clip tcFormat='NDF' {...props} {...rest}>
+            {mute && (
+                <audio-channel-source srcCh='2, 1'>
+                    <mute start={start} duration={duration} />
+                </audio-channel-source>
+            )}
             {children}
         </asset-clip>
     )
@@ -49,6 +55,7 @@ export const Asset = ({
     start,
     duration,
     hasVideo = true,
+
     hasAudio = false,
     formatName = 'FFVideoFormat1080p',
     audioSources = true,

@@ -26,7 +26,7 @@ const Example = ({}) => {
                 <project name='Demo Title of project'>
                     <sequence format='r1' duration='10s'>
                         <spine>
-                            <Clip ref={VIDEO_ID} duration={1} />
+                            <Clip mute ref={VIDEO_ID} duration={1} />
                             <Clip offset={2} ref={VIDEO_ID} duration={1}>
                                 <Clip
                                     offset={2}
