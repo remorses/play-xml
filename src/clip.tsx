@@ -61,6 +61,7 @@ export const Asset = ({
     audioRate = 44100,
     fps = 25,
 }) => {
+    // TODO try using an audio asset
     const formatId = 'r' + uuid.v4().replace(/-/g, '').slice(0, 2)
     return (
         <Fragment>
