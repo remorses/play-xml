@@ -7,7 +7,7 @@ Offset is relative to the parent clip
 Duration is by default the total video duration
 
 ```jsx
-<Clip ref={VIDEO_ID} duration={3} offset={4} />
+<Clip src='./video.mp4' duration={3} offset={4} />
 ```
 
 ## Select source video
@@ -15,7 +15,7 @@ Duration is by default the total video duration
 You can use the start prop to select the start of the source video you want to mask
 
 ```jsx
-<Clip ref={VIDEO_ID} start={3} duration={1} />
+<Clip src='./video.mp4' start={3} duration={1} />
 ```
 
 ## Sequence of clips
@@ -23,11 +23,11 @@ You can use the start prop to select the start of the source video you want to m
 Clips are put by default one after the other
 
 ```jsx
-<spine lane='-3'>
-    <Clip ref={VIDEO_ID} duration={1} />
-    <Clip ref={VIDEO_ID} duration={1} />
-    <Clip ref={VIDEO_ID} duration={1} />
-    <Clip ref={VIDEO_ID} duration={1} />
+<spine lane='0'>
+    <Clip src='./video.mp4' duration={1} />
+    <Clip src='./video.mp4' duration={1} />
+    <Clip src='./video.mp4' duration={1} />
+    <Clip src='./video.mp4' duration={1} />
 </spine>
 ```
 
@@ -36,21 +36,21 @@ Clips are put by default one after the other
 To start come clips with same offset as another clip A, put the clips as children of A and layer them on `lanes`
 
 ```jsx
-<Clip ref={VIDEO_ID} duration={1}>
-    <Clip lane='-1' ref={VIDEO_ID} duration={1} offset={1} />
-    <Clip lane='-2' ref={VIDEO_ID} duration={1} offset={2} />
+<Clip src='./video.mp4' duration={1}>
+    <Clip lane='-1' src='./video.mp4' duration={1} offset={1} />
+    <Clip lane='-2' src='./video.mp4' duration={1} offset={2} />
 </Clip>
 ```
 
 ## Sequence of clips, children of clip
 
 ```jsx
-<Clip ref={VIDEO_ID} duration={1}>
-    <Clip lane='-1' ref={VIDEO_ID} duration={1} offset={1} />
+<Clip src='./video.mp4' duration={1}>
+    <Clip lane='-1' src='./video.mp4' duration={1} offset={1} />
     <spine lane='-2'>
-        <Clip ref={AUDIO_ID} duration={1} />
-        <Clip ref={AUDIO_ID} duration={1} />
-        <Clip ref={AUDIO_ID} duration={1} />
+        <Clip src='./audio.mp3' duration={1} />
+        <Clip src='./audio.mp3' duration={1} />
+        <Clip src='./audio.mp3' duration={1} />
     </spine>
 </Clip>
 ```
