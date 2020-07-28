@@ -8,6 +8,7 @@ export function formatDuration(n) {
     if (!n) {
         return
     }
+    // TODO based on bpm or fps instead of seconds, how to pass the project fps and bpm to use?
     if (typeof n === 'number') {
         if (n % 1 === 0) {
             return `${n}s`
