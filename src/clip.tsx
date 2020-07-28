@@ -56,6 +56,7 @@ export const Clip = ({
 
 // TODO needs to pass the offset explicitly or it will just be the start of timeline
 // TODO transition offset is weird
+// TODO instead of using ref use src and export some src transitions you can use (put by default inside resources)
 export const SimpleTransition = ({
     duration = 0.5,
     offset = undefined,
