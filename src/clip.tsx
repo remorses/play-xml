@@ -55,6 +55,7 @@ export const Clip = ({
 }
 
 // TODO needs to pass the offset explicitly or it will just be the start of timeline
+// TODO transition offset is weird
 export const SimpleTransition = ({
     duration = 0.5,
     offset = undefined,

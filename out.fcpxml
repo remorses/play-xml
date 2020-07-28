@@ -2,10 +2,10 @@
 <fcpxml version="1.8">
   <resources>
     <format id="r1" name="FFVideoFormat720p60" frameDuration="100/6000s" width="1280" height="720" colorSpace="1-1-1 (Rec. 709)"/>
-    <format id="r9022b6f0-036d-4582-8fbb-a4bb0fa237e9" name="FFVideoFormat1080p25"/>
-    <asset id="rdmlkZW8ubXA0" src="./video.mp4" start="0s" duration="5s" hasVideo="1" hasAudio="0" format="r9022b6f0-036d-4582-8fbb-a4bb0fa237e9" audioSources="1" audioChannels="2" audioRate="44100"/>
-    <format id="rd30c666f-fa5c-4442-b9dc-07cc6fa6bb45" name="FFVideoFormat1080p25"/>
-    <asset id="rYXVkaW8ud2F2" src="./audio.wav" start="0s" duration="5s" hasVideo="1" hasAudio="0" format="rd30c666f-fa5c-4442-b9dc-07cc6fa6bb45" audioSources="1" audioChannels="2" audioRate="44100"/>
+    <format id="r5578f283-804b-4ec5-af39-4c2b52149f4f" name="FFVideoFormat1080p25"/>
+    <asset id="rdmlkZW8ubXA0" src="./video.mp4" start="0s" duration="5s" hasVideo="1" hasAudio="0" format="r5578f283-804b-4ec5-af39-4c2b52149f4f" audioSources="1" audioChannels="2" audioRate="44100"/>
+    <format id="r61507833-5f39-4ef3-ba6d-293fd39ec6d0" name="FFVideoFormat1080p25"/>
+    <asset id="rYXVkaW8ud2F2" src="./audio.wav" start="0s" duration="5s" hasVideo="1" hasAudio="0" format="r61507833-5f39-4ef3-ba6d-293fd39ec6d0" audioSources="1" audioChannels="2" audioRate="44100"/>
     <effect id="trans" name="Gaussian" uid=".../Transitions.localized/Blurs.localized/Gaussian.localized/Gaussian.motr"/>
   </resources>
   <event name="Demo Title of project">
@@ -33,7 +33,7 @@
             </spine>
           </asset-clip>
           <asset-clip tcFormat="NDF" name="Untitled" duration="1s" audioRole="dialogue" ref="rdmlkZW8ubXA0"/>
-          <transition name="Transition" duration="15000/30000s">
+          <transition name="Transition" duration="15000/30000s" offset="3000/30000s">
             <filter-video ref="trans" name="Gaussian"/>
           </transition>
           <asset-clip tcFormat="NDF" name="Untitled" duration="1s" audioRole="dialogue" ref="rdmlkZW8ubXA0"/>

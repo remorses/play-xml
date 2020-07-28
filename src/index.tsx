@@ -64,7 +64,7 @@ const Example = ({}) => {
                                 </spine>
                             </Clip>
                             <Clip path={VIDEO_PATH} duration={1} />
-                            <SimpleTransition videoRef={TRANSITION_REF} />
+                            <SimpleTransition offset={0.1} videoRef={TRANSITION_REF} />
                             <Clip path={VIDEO_PATH} duration={1} />
                             <Clip path={VIDEO_PATH} duration={1} />
                         </spine>
