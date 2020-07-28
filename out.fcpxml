@@ -2,10 +2,11 @@
 <fcpxml version="1.8">
   <resources>
     <format id="r1" name="FFVideoFormat720p60" frameDuration="100/6000s" width="1280" height="720" colorSpace="1-1-1 (Rec. 709)"/>
-    <format id="rda" name="FFVideoFormat1080p25"/>
-    <asset id="vid" src="./video.mp4" start="0s" duration="5s" hasVideo="1" hasAudio="0" format="rda" audioSources="1" audioChannels="2" audioRate="44100"/>
-    <format id="rd9" name="FFVideoFormat1080p25"/>
-    <asset id="aud" src="./audio.wav" start="0s" duration="5s" hasVideo="1" hasAudio="0" format="rd9" audioSources="1" audioChannels="2" audioRate="44100"/>
+    <format id="r6a" name="FFVideoFormat1080p25"/>
+    <asset id="vid" src="./video.mp4" start="0s" duration="5s" hasVideo="1" hasAudio="0" format="r6a" audioSources="1" audioChannels="2" audioRate="44100"/>
+    <format id="rad" name="FFVideoFormat1080p25"/>
+    <asset id="aud" src="./audio.wav" start="0s" duration="5s" hasVideo="1" hasAudio="0" format="rad" audioSources="1" audioChannels="2" audioRate="44100"/>
+    <effect id="trans" name="Gaussian" uid=".../Transitions.localized/Blurs.localized/Gaussian.localized/Gaussian.motr"/>
   </resources>
   <event name="Demo Title of project">
     <project name="Demo Title of project">
@@ -29,6 +30,9 @@
             </spine>
           </asset-clip>
           <asset-clip tcFormat="NDF" name="Untitled" ref="vid" duration="1s" audioRole="dialogue"/>
+          <transition name="Transition" duration="15000/30000s">
+            <filter-video ref="trans" name="Gaussian"/>
+          </transition>
           <asset-clip tcFormat="NDF" name="Untitled" ref="vid" duration="1s" audioRole="dialogue"/>
           <asset-clip tcFormat="NDF" name="Untitled" ref="vid" duration="1s" audioRole="dialogue"/>
         </spine>

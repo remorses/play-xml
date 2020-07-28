@@ -14,11 +14,11 @@ to use end on a clip you must specify end to the asset
 */
 export const Clip = ({
     name = 'Untitled',
-    start,
+    start = undefined,
     duration,
+    offset = undefined,
     ref,
     audioRole = 'dialogue',
-    offset = undefined,
     format,
     mute = false,
     children = null,
@@ -52,6 +52,31 @@ export const Clip = ({
                 <param name='Saturation Shadows' key='2007' value='1' />
             </filter-video> */}
         </asset-clip>
+    )
+}
+
+// TODO needs to pass the offset explicitly or it will just be the start of timeline
+export const SimpleTransition = ({
+    duration = 0.5,
+    offset = undefined,
+    name = 'Transition',
+    children = null,
+    videoRef,
+    ...rest
+}) => {
+    const props: any = omitBy(
+        {
+            duration: formatDuration(duration),
+            offset: formatDuration(offset),
+        },
+        isUndefined,
+    )
+    return (
+        <transition name={name} {...props} {...rest}>
+            <filter-video ref={videoRef} name='Gaussian' />
+            {children}
+            {/* <filter-audio ref='r5' name='Audio Crossfade' /> */}
+        </transition>
     )
 }
 

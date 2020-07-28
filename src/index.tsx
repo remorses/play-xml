@@ -1,12 +1,15 @@
 import fs from 'fs'
 import { render, JSXXML } from 'jsx-xml'
 import { Wrapper } from './project'
-import { Asset, Clip } from './clip'
+import { Asset, Clip, SimpleTransition } from './clip'
 import { Beats } from './time'
 
 const Example = ({}) => {
     const VIDEO_ID = 'vid'
     const AUDIO_ID = 'aud'
+    const TRANSITION_REF = 'trans'
+    // TODO remove resources, instead you can pass a path to every clip
+    // TODO make a library of transition you can use as component
     return (
         <fcpxml version='1.8'>
             <resources>
@@ -20,6 +23,12 @@ const Example = ({}) => {
                 />
                 <Asset id={VIDEO_ID} src='./video.mp4' start={0} duration={5} />
                 <Asset id={AUDIO_ID} src='./audio.wav' start={0} duration={5} />
+                <effect
+                    id={TRANSITION_REF}
+                    name='Gaussian'
+                    // TODO what is ...? is it portable?
+                    uid='.../Transitions.localized/Blurs.localized/Gaussian.localized/Gaussian.motr'
+                />
             </resources>
 
             <event name='Demo Title of project'>
@@ -36,16 +45,38 @@ const Example = ({}) => {
                                 />
                                 <Clip lane='-2' ref={VIDEO_ID} duration={1} />
                                 <spine lane='-3'>
-                                    <Clip ref={AUDIO_ID} duration={Beats(1/2)} />
-                                    <Clip ref={AUDIO_ID} duration={Beats(1/2)} />
-                                    <Clip ref={AUDIO_ID} duration={Beats(1/2)} />
-                                    <Clip ref={AUDIO_ID} duration={Beats(1/2)} />
-                                    <Clip ref={AUDIO_ID} duration={Beats(1/2)} />
-                                    <Clip ref={AUDIO_ID} duration={Beats(1/2)} />
-                                    <Clip ref={AUDIO_ID} duration={Beats(1/2)} />
+                                    <Clip
+                                        ref={AUDIO_ID}
+                                        duration={Beats(1 / 2)}
+                                    />
+                                    <Clip
+                                        ref={AUDIO_ID}
+                                        duration={Beats(1 / 2)}
+                                    />
+                                    <Clip
+                                        ref={AUDIO_ID}
+                                        duration={Beats(1 / 2)}
+                                    />
+                                    <Clip
+                                        ref={AUDIO_ID}
+                                        duration={Beats(1 / 2)}
+                                    />
+                                    <Clip
+                                        ref={AUDIO_ID}
+                                        duration={Beats(1 / 2)}
+                                    />
+                                    <Clip
+                                        ref={AUDIO_ID}
+                                        duration={Beats(1 / 2)}
+                                    />
+                                    <Clip
+                                        ref={AUDIO_ID}
+                                        duration={Beats(1 / 2)}
+                                    />
                                 </spine>
                             </Clip>
                             <Clip ref={VIDEO_ID} duration={1} />
+                            <SimpleTransition videoRef={TRANSITION_REF} />
                             <Clip ref={VIDEO_ID} duration={1} />
                             <Clip ref={VIDEO_ID} duration={1} />
                         </spine>
