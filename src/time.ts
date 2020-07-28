@@ -8,7 +8,7 @@ export type TimeObject =
           toString: () => string
       }
 
-export function Beats(n: number, bpm: number): TimeObject {
+export function Beats(n: number, bpm: number = 120): TimeObject {
     return {
         isBpm: true,
         timeString: `${Math.floor(60 * n * 1000)}/${bpm * 1000}s`,
@@ -19,7 +19,7 @@ export function Beats(n: number, bpm: number): TimeObject {
     }
 }
 
-export function Fps(n: number, fps: number): TimeObject {
+export function Fps(n: number, fps: number = 25): TimeObject {
     return {
         isFps: true,
         timeString: `${Math.floor(n * 1000)}/${fps * 1000}s`,

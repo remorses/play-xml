@@ -2,6 +2,7 @@ import fs from 'fs'
 import { render, JSXXML } from 'jsx-xml'
 import { Wrapper } from './project'
 import { Asset, Clip } from './clip'
+import { Beats } from './time'
 
 const Example = ({}) => {
     const VIDEO_ID = 'vid'
@@ -35,15 +36,12 @@ const Example = ({}) => {
                                 />
                                 <Clip lane='-2' ref={VIDEO_ID} duration={1} />
                                 <spine lane='-3'>
-                                    <Clip ref={AUDIO_ID} duration={0.1} />
-                                    <Clip ref={AUDIO_ID} duration={0.1} />
-                                    <Clip ref={AUDIO_ID} duration={0.1} />
-                                    <Clip ref={AUDIO_ID} duration={0.1} />
-                                    <Clip ref={AUDIO_ID} duration={0.1} />
-                                    <Clip ref={AUDIO_ID} duration={0.1} />
-                                    <Clip ref={AUDIO_ID} duration={0.1} />
-                                    <Clip ref={AUDIO_ID} duration={0.1} />
-                                    <Clip ref={AUDIO_ID} duration={0.1} />
+                                    <Clip ref={AUDIO_ID} duration={Beats(1)} />
+                                    <Clip ref={AUDIO_ID} duration={Beats(1)} />
+                                    <Clip ref={AUDIO_ID} duration={Beats(1)} />
+                                    <Clip ref={AUDIO_ID} duration={Beats(1)} />
+                                    <Clip ref={AUDIO_ID} duration={Beats(1)} />
+                                    <Clip ref={AUDIO_ID} duration={Beats(1)} />
                                 </spine>
                             </Clip>
                             <Clip ref={VIDEO_ID} duration={1} />
