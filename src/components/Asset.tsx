@@ -1,10 +1,11 @@
 import { Fragment, JSXXML } from 'jsx-xml'
 import * as uuid from 'uuid'
 import { formatBoolean, pathToRef } from '../support'
+import { formatDuration } from '../time'
 
 export const Asset = ({
     src,
-    start,
+    start = 0,
     duration,
     hasVideo = true,
     hasAudio = false,
@@ -23,14 +24,14 @@ export const Asset = ({
             <asset
                 id={pathToRef(src)}
                 src={src}
-                start={`${start}s`}
-                duration={`${duration}s`}
+                start={formatDuration(start)}
+                duration={formatDuration(duration)}
                 hasVideo={formatBoolean(hasVideo)}
                 hasAudio={formatBoolean(hasAudio)}
                 format={formatId}
                 audioSources={formatBoolean(audioSources)}
-                audioChannels={String(audioChannels)}
-                audioRate={String(audioRate)}
+                audioChannels={audioChannels}
+                audioRate={audioRate}
             />
 
             {/* TODO add format props like  name="FFVideoFormat720p2398" frameDuration="1001/24000s" width="1280" height="720" colorSpace="1-1-1 (Rec. 709)"  */}

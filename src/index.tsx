@@ -48,8 +48,20 @@ const Example = ({}) => {
                 <project name='Demo Title of project'>
                     <sequence format='r1' duration='10s'>
                         <spine lane='0'>
-                            <Clip mute lane='0' src={VIDEO_PATH} duration={1} />
-                            <Clip mute lane='0' src={VIDEO_PATH} />
+                            <Clip mute lane='0' src={VIDEO_PATH} duration={1}>
+                                <Clip
+                                    mute
+                                    lane='-1'
+                                    src={VIDEO_PATH}
+                                    duration={2}
+                                />
+                                <spine lane='-2'>
+                                    <Clip mute src={VIDEO_PATH} duration={3} />
+                                    <Clip mute src={VIDEO_PATH} duration={3} />
+                                    <Clip mute src={VIDEO_PATH} duration={3} />
+                                </spine>
+                            </Clip>
+                            {/* <Clip mute lane='-1' src={VIDEO_PATH} /> */}
                         </spine>
                     </sequence>
                 </project>

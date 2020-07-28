@@ -1,3 +1,5 @@
+import { isUndefined } from "lodash"
+
 export type TimeObject =
     | number
     | {
@@ -34,7 +36,7 @@ export function formatDuration(
     n: TimeObject,
     denominator = DEFAULT_DENOMINATOR,
 ): string {
-    if (!n) {
+    if (isUndefined(n)) {
         return
     }
     if (typeof n === 'string') {

@@ -14,9 +14,20 @@
         <spine lane="0">
           <asset-clip tcFormat="NDF" name="Untitled" duration="1s" audioRole="dialogue" lane="0" ref="r766964656f2e6d7034">
             <adjust-volume amount="-96dB"/>
-          </asset-clip>
-          <asset-clip tcFormat="NDF" name="Untitled" audioRole="dialogue" lane="0" ref="r766964656f2e6d7034">
-            <adjust-volume amount="-96dB"/>
+            <asset-clip tcFormat="NDF" name="Untitled" duration="2s" audioRole="dialogue" lane="-1" ref="r766964656f2e6d7034">
+              <adjust-volume amount="-96dB"/>
+            </asset-clip>
+            <spine lane="-2">
+              <asset-clip tcFormat="NDF" name="Untitled" duration="3s" audioRole="dialogue" ref="r766964656f2e6d7034">
+                <adjust-volume amount="-96dB"/>
+              </asset-clip>
+              <asset-clip tcFormat="NDF" name="Untitled" duration="3s" audioRole="dialogue" ref="r766964656f2e6d7034">
+                <adjust-volume amount="-96dB"/>
+              </asset-clip>
+              <asset-clip tcFormat="NDF" name="Untitled" duration="3s" audioRole="dialogue" ref="r766964656f2e6d7034">
+                <adjust-volume amount="-96dB"/>
+              </asset-clip>
+            </spine>
           </asset-clip>
         </spine>
       </sequence>
