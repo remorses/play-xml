@@ -41,7 +41,10 @@ export const Clip = ({
         <asset-clip tcFormat='NDF' {...props} {...rest}>
             {mute && (
                 <audio-channel-source srcCh='2, 1'>
-                    <mute start={start} duration={duration} />
+                    <mute
+                        start={formatDuration(start) ?? '0s'}
+                        duration={formatDuration(duration)}
+                    />
                 </audio-channel-source>
             )}
             {children}
