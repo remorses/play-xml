@@ -20,7 +20,7 @@ export const Clip = ({
     audioRole = 'dialogue',
     offset = undefined,
     format,
-    mute = false, // TODO mute does not work on clips with children clips
+    mute = false,
     children = null,
     ...rest
 }: any) => {
@@ -39,15 +39,18 @@ export const Clip = ({
 
     return (
         <asset-clip tcFormat='NDF' {...props} {...rest}>
-            {mute && (
-                <audio-channel-source srcCh='2, 1'>
-                    <mute
-                        start={formatDuration(start) ?? '0s'}
-                        duration={formatDuration(duration)}
-                    />
-                </audio-channel-source>
-            )}
+            {mute && <adjust-volume amount='-96dB' />}
             {children}
+            {/* <filter-video ref='r5' name='Color Correction'>
+                <param
+                    name='Color Shadows'
+                    key='2003'
+                    value='0.429101 0.526828'
+                />
+                <param name='Saturation Highlights' key='2005' value='1' />
+                <param name='Saturation Midtones' key='2006' value='1' />
+                <param name='Saturation Shadows' key='2007' value='1' />
+            </filter-video> */}
         </asset-clip>
     )
 }

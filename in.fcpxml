@@ -5,7 +5,7 @@
     <resources>
         <format id="r1" name="FFVideoFormat720p60" frameDuration="100/6000s" width="1280" height="720" colorSpace="1-1-1 (Rec. 709)"/>
         <asset id="r2" name="video" uid="18F75D138470AD4842EDA1E1613E087A" src="file:///Users/morse/Documents/GitHub/play-xml/video.mp4" start="0s" duration="15933/1000s" hasVideo="1" format="r3" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
-            <bookmark>Ym9vawQDAAAAAAQQMAAAAKTHMfNx7sZEcnQ1U7Ah5kcRqwdvTYpYZp1AJEo2R4gjAAIAAAQAAAADAwAAABgAKAUAAAABAQAAVXNlcnMAAAAFAAAAAQEAAG1vcnNlAAAACQAAAAEBAABEb2N1bWVudHMAAAAGAAAAAQEAAEdpdEh1YgAACAAAAAEBAABwbGF5LXhtbAkAAAABAQAAdmlkZW8ubXA0AAAAGAAAAAEGAAAQAAAAIAAAADAAAABEAAAAVAAAAGQAAAAIAAAABAMAAHlTAAADAAAACAAAAAQDAACucAAAAwAAAAgAAAAEAwAAIHUaAAMAAAAIAAAABAMAANLfGgADAAAACAAAAAQDAADXfjYDAwAAAAgAAAAEAwAAUqpBAwMAAAAYAAAAAQYAAJgAAACoAAAAuAAAAMgAAADYAAAA6AAAAAgAAAAABAAAQcEj4qkAAAAYAAAAAQIAAAEAAAAAAAAADwAAAAAAAAAAAAAAAAAAAAgAAAAEAwAABAAAAAAAAAAEAAAAAwMAAPUBAAAIAAAAAQkAAGZpbGU6Ly8vAgAAAAEBAABNMgAACAAAAAQDAAAAwD9kdAAAAAgAAAAABAAAQcG3AIW6kkMkAAAAAQEAADlBNEZCRTFBLUM3RjMtNERFNi04Mjg0LTQ3MTAxMDJBNThFMRgAAAABAgAAgQAAAAEAAADvEwAAAQAAAAAAAAAAAAAAAQAAAAEBAAAvAAAAAAAAAAEFAADMAAAA/v///wEAAAAAAAAAEAAAAAQQAAB4AAAAAAAAAAUQAAD4AAAAAAAAABAQAAAoAQAAAAAAAEAQAAAYAQAAAAAAAAIgAADsAQAAAAAAAAUgAABkAQAAAAAAABAgAAB0AQAAAAAAABEgAACgAQAAAAAAABIgAACAAQAAAAAAABMgAACQAQAAAAAAACAgAADMAQAAAAAAADAgAAD4AQAAAAAAAAHAAABIAQAAAAAAABHAAAAgAAAAAAAAABLAAABYAQAAAAAAABDQAAAEAAAAAAAAAA==</bookmark>
+            <bookmark>Ym9vawQDAAAAAAQQMAAAAFKbe3eStcZufnqA8gDGHrrRDgyPq7IQp3XuabjhguZnAAIAAAQAAAADAwAAABgAKAUAAAABAQAAVXNlcnMAAAAFAAAAAQEAAG1vcnNlAAAACQAAAAEBAABEb2N1bWVudHMAAAAGAAAAAQEAAEdpdEh1YgAACAAAAAEBAABwbGF5LXhtbAkAAAABAQAAdmlkZW8ubXA0AAAAGAAAAAEGAAAQAAAAIAAAADAAAABEAAAAVAAAAGQAAAAIAAAABAMAAHlTAAADAAAACAAAAAQDAACucAAAAwAAAAgAAAAEAwAAIHUaAAMAAAAIAAAABAMAANLfGgADAAAACAAAAAQDAADXfjYDAwAAAAgAAAAEAwAAUqpBAwMAAAAYAAAAAQYAAJgAAACoAAAAuAAAAMgAAADYAAAA6AAAAAgAAAAABAAAQcEj4qkAAAAYAAAAAQIAAAEAAAAAAAAADwAAAAAAAAAAAAAAAAAAAAgAAAAEAwAABAAAAAAAAAAEAAAAAwMAAPUBAAAIAAAAAQkAAGZpbGU6Ly8vAgAAAAEBAABNMgAACAAAAAQDAAAAwD9kdAAAAAgAAAAABAAAQcG3AIW6kkMkAAAAAQEAADlBNEZCRTFBLUM3RjMtNERFNi04Mjg0LTQ3MTAxMDJBNThFMRgAAAABAgAAgQAAAAEAAADvEwAAAQAAAAAAAAAAAAAAAQAAAAEBAAAvAAAAAAAAAAEFAADMAAAA/v///wEAAAAAAAAAEAAAAAQQAAB4AAAAAAAAAAUQAAD4AAAAAAAAABAQAAAoAQAAAAAAAEAQAAAYAQAAAAAAAAIgAADsAQAAAAAAAAUgAABkAQAAAAAAABAgAAB0AQAAAAAAABEgAACgAQAAAAAAABIgAACAAQAAAAAAABMgAACQAQAAAAAAACAgAADMAQAAAAAAADAgAAD4AQAAAAAAAAHAAABIAQAAAAAAABHAAAAgAAAAAAAAABLAAABYAQAAAAAAABDQAAAEAAAAAAAAAA==</bookmark>
             <metadata>
                 <md key="com.apple.proapps.spotlight.kMDItemCodecs">
                     <array>
@@ -16,18 +16,48 @@
             </metadata>
         </asset>
         <format id="r3" name="FFVideoFormat720p2398" frameDuration="1001/24000s" width="1280" height="720" colorSpace="1-1-1 (Rec. 709)"/>
+        <asset id="r4" name="audio" uid="0A89D581FF7CA5749771E5A4A522787E" src="file:///Users/morse/Documents/GitHub/play-xml/audio.wav" start="0s" duration="5512/44100s" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <bookmark>Ym9vawQDAAAAAAQQMAAAABv/1+2Mt0tHQ3gIttUYtPQv5l9TSgmpFiqM81eELIL9AAIAAAQAAAADAwAAABgAKAUAAAABAQAAVXNlcnMAAAAFAAAAAQEAAG1vcnNlAAAACQAAAAEBAABEb2N1bWVudHMAAAAGAAAAAQEAAEdpdEh1YgAACAAAAAEBAABwbGF5LXhtbAkAAAABAQAAYXVkaW8ud2F2AAAAGAAAAAEGAAAQAAAAIAAAADAAAABEAAAAVAAAAGQAAAAIAAAABAMAAHlTAAADAAAACAAAAAQDAACucAAAAwAAAAgAAAAEAwAAIHUaAAMAAAAIAAAABAMAANLfGgADAAAACAAAAAQDAADXfjYDAwAAAAgAAAAEAwAAAvRBAwMAAAAYAAAAAQYAAJgAAACoAAAAuAAAAMgAAADYAAAA6AAAAAgAAAAABAAAQcBe5j2AAAAYAAAAAQIAAAEAAAAAAAAADwAAAAAAAAAAAAAAAAAAAAgAAAAEAwAABAAAAAAAAAAEAAAAAwMAAPUBAAAIAAAAAQkAAGZpbGU6Ly8vAgAAAAEBAABNMgAACAAAAAQDAAAAwD9kdAAAAAgAAAAABAAAQcG3AIW6kkMkAAAAAQEAADlBNEZCRTFBLUM3RjMtNERFNi04Mjg0LTQ3MTAxMDJBNThFMRgAAAABAgAAgQAAAAEAAADvEwAAAQAAAAAAAAAAAAAAAQAAAAEBAAAvAAAAAAAAAAEFAADMAAAA/v///wEAAAAAAAAAEAAAAAQQAAB4AAAAAAAAAAUQAAD4AAAAAAAAABAQAAAoAQAAAAAAAEAQAAAYAQAAAAAAAAIgAADsAQAAAAAAAAUgAABkAQAAAAAAABAgAAB0AQAAAAAAABEgAACgAQAAAAAAABIgAACAAQAAAAAAABMgAACQAQAAAAAAACAgAADMAQAAAAAAADAgAAD4AQAAAAAAAAHAAABIAQAAAAAAABHAAAAgAAAAAAAAABLAAABYAQAAAAAAABDQAAAEAAAAAAAAAA==</bookmark>
+        </asset>
+        <effect id="r5" name="Color Correction" uid="FFColorCorrectionHDREffect"/>
     </resources>
     <library location="file:///Volumes/DB/Downloads/Test%202.fcpbundle/">
         <event name="Demo Title of project" uid="9199D418-7824-4B2E-8045-333B9DC3674C">
-            <project name="Demo Title of project" uid="830DF92A-9DB1-49D8-8B73-ED5BCF4A0655" modDate="2020-07-28 16:19:18 +0200">
-                <sequence duration="17/12s" format="r1" tcStart="0s" audioLayout="stereo" audioRate="48k">
+            <project name="Demo Title of project" uid="8B580366-BBBE-4CCF-ACBE-98D1D18B322C" modDate="2020-07-28 18:07:21 +0200">
+                <sequence duration="6s" format="r1" tcStart="0s" audioLayout="stereo" audioRate="48k">
                     <spine>
                         <asset-clip name="Untitled" offset="0s" ref="r2" duration="1s" audioRole="dialogue" tcFormat="NDF">
-                            <asset-clip name="Untitled" lane="-2" offset="0s" ref="r2" duration="1s" audioRole="dialogue" tcFormat="NDF"/>
-                            <asset-clip name="Untitled" lane="-1" offset="5/12s" ref="r2" duration="1s" audioRole="dialogue" tcFormat="NDF"/>
+                            <adjust-volume amount="-96dB"/>
+                            <audio-channel-source role="dialogue.dialogue-1" srcCh="2, 1">
+                                <mute start="0s" duration="1s"/>
+                            </audio-channel-source>
                         </asset-clip>
+                        <gap name="Gap" offset="1s" duration="1s" start="3600s"/>
+                        <asset-clip name="Untitled" offset="2s" ref="r2" duration="1s" audioRole="dialogue" tcFormat="NDF">
+                            <adjust-volume amount="-96dB"/>
+                            <asset-clip name="Untitled" lane="-1" offset="0s" ref="r2" duration="1s" audioRole="dialogue" tcFormat="NDF"/>
+                            <spine lane="-1" offset="0s">
+                                <asset-clip name="Untitled" offset="0s" ref="r4" duration="30000/120000s" audioRole="dialogue" tcFormat="NDF"/>
+                                <asset-clip name="Untitled" offset="30000/120000s" ref="r4" duration="30000/120000s" audioRole="dialogue" tcFormat="NDF"/>
+                                <asset-clip name="Untitled" offset="60000/120000s" ref="r4" duration="30000/120000s" audioRole="dialogue" tcFormat="NDF"/>
+                                <asset-clip name="Untitled" offset="90000/120000s" ref="r4" duration="30000/120000s" audioRole="dialogue" tcFormat="NDF"/>
+                                <asset-clip name="Untitled" offset="1s" ref="r4" duration="30000/120000s" audioRole="dialogue" tcFormat="NDF"/>
+                                <asset-clip name="Untitled" offset="150000/120000s" ref="r4" duration="30000/120000s" audioRole="dialogue" tcFormat="NDF"/>
+                                <asset-clip name="Untitled" offset="180000/120000s" ref="r4" duration="30000/120000s" audioRole="dialogue" tcFormat="NDF"/>
+                            </spine>
+                            <asset-clip name="Untitled" lane="-1" offset="2s" ref="r2" duration="1s" audioRole="dialogue" tcFormat="NDF"/>
+                            <filter-video ref="r5" name="Color Correction">
+                                <!-- info-asc-cdl: slope="1.02683 0.973172 0.995997" offset="-0.0268281 0.0268281 0.00400307" power="0.996579 0.996579 0.996579" -->
+                                <param name="Color Shadows" key="2003" value="0.429101 0.526828"/>
+                                <param name="Saturation Highlights" key="2005" value="1"/>
+                                <param name="Saturation Midtones" key="2006" value="1"/>
+                                <param name="Saturation Shadows" key="2007" value="1"/>
+                            </filter-video>
+                        </asset-clip>
+                        <asset-clip name="Untitled" offset="3s" ref="r2" duration="1s" audioRole="dialogue" tcFormat="NDF"/>
+                        <asset-clip name="Untitled" offset="4s" ref="r2" duration="1s" audioRole="dialogue" tcFormat="NDF"/>
+                        <asset-clip name="Untitled" offset="5s" ref="r2" duration="1s" audioRole="dialogue" tcFormat="NDF"/>
                     </spine>
-                    <asset-clip name="Untitled" lane="1" offset="2s" ref="r2" duration="1s" audioRole="dialogue" tcFormat="NDF"/>
                 </sequence>
             </project>
         </event>

@@ -27,7 +27,7 @@ const Example = ({}) => {
                     <sequence format='r1' duration='10s'>
                         <spine>
                             <Clip mute ref={VIDEO_ID} duration={1} />
-                            <Clip offset={2} ref={VIDEO_ID} duration={1}>
+                            <Clip mute offset={2} ref={VIDEO_ID} duration={1}>
                                 <Clip
                                     offset={2}
                                     lane='-1'
