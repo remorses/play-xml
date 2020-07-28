@@ -1,7 +1,7 @@
 import fs from 'fs'
 import { render, JSXXML, JSXNode } from 'jsx-xml'
 import { Wrapper } from './project'
-import { Asset, Clip, SimpleTransition } from './clip'
+import { Asset, Clip, SimpleTransition } from './components'
 import { Beats } from './time'
 
 // TODO make a Parallel element that makes some clips parallel (making the first clip the parent and other clips children)
@@ -49,7 +49,7 @@ const Example = ({}) => {
                     <sequence format='r1' duration='10s'>
                         <spine lane='0'>
                             <Clip mute lane='0' src={VIDEO_PATH} duration={1} />
-                            <Clip mute lane='0' src={VIDEO_PATH}  />
+                            <Clip mute lane='0' src={VIDEO_PATH} />
                         </spine>
                     </sequence>
                 </project>

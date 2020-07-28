@@ -37,7 +37,9 @@ export function formatDuration(
     if (!n) {
         return
     }
-    // TODO based on bpm or fps instead of seconds, how to pass the project fps and bpm to use? maybe pass an instance new Beats(3, 128) to make 3 beats at 128 bpm or new Frames(10, 25) to pass 10 frames at 25 fps
+    if (typeof n === 'string') {
+        return n
+    }
     if (typeof n === 'number') {
         if (n % 1 === 0) {
             return `${n}s`
