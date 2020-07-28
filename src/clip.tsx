@@ -20,7 +20,7 @@ export const Clip = ({
     audioRole = 'dialogue',
     offset = undefined,
     format,
-    mute = false, // TODO mute does not work on parent clips
+    mute = false, // TODO mute does not work on clips with children clips
     children = null,
     ...rest
 }: any) => {
