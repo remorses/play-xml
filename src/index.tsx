@@ -36,12 +36,13 @@ const Example = ({}) => {
                                 />
                                 <Clip lane='-2' ref={VIDEO_ID} duration={1} />
                                 <spine lane='-3'>
-                                    <Clip ref={AUDIO_ID} duration={Beats(1)} />
-                                    <Clip ref={AUDIO_ID} duration={Beats(1)} />
-                                    <Clip ref={AUDIO_ID} duration={Beats(1)} />
-                                    <Clip ref={AUDIO_ID} duration={Beats(1)} />
-                                    <Clip ref={AUDIO_ID} duration={Beats(1)} />
-                                    <Clip ref={AUDIO_ID} duration={Beats(1)} />
+                                    <Clip ref={AUDIO_ID} duration={Beats(1/2)} />
+                                    <Clip ref={AUDIO_ID} duration={Beats(1/2)} />
+                                    <Clip ref={AUDIO_ID} duration={Beats(1/2)} />
+                                    <Clip ref={AUDIO_ID} duration={Beats(1/2)} />
+                                    <Clip ref={AUDIO_ID} duration={Beats(1/2)} />
+                                    <Clip ref={AUDIO_ID} duration={Beats(1/2)} />
+                                    <Clip ref={AUDIO_ID} duration={Beats(1/2)} />
                                 </spine>
                             </Clip>
                             <Clip ref={VIDEO_ID} duration={1} />
