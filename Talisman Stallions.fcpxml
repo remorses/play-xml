@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fcpxml>
+<fcpxml version="1.8">
+	<resources>
+		<format id="r1" name="FFVideoFormat720p60" frameDuration="100/6000s" width="1280" height="720" colorSpace="1-1-1 (Rec. 709)" />
+		<format id="r2" name="FFVideoFormat720p25" frameDuration="3600/90000s" width="1280" height="720" colorSpace="1-1-1 (Rec. 709)" />
+		<asset id="r3" name="Ghost in the Shell intro HD" uid="C9B02B61328A5C1D0DF58BE4E40B886C" src="file:///Volumes/DB/final%20cut/Untitled.fcpbundle/11-08-2017/Original%20Media/Ghost%20in%20the%20Shell%20intro%20HD.mp4" start="0s" duration="17852400/90000s" hasVideo="1" format="r2" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+			<bookmark>
+				Ym9vazwEAAAAAAQQMAAAAPY92B9kZqBoysFitAHdPUs6v0uQrP3jnITdGAbzo8w6XAMAAAQAAAADAwAAABgAKAcAAAABAQAAVm9sdW1lcwACAAAAAQEAAERCAAAJAAAAAQEAAGZpbmFsIGN1dAAAABIAAAABAQAAVW50aXRsZWQuZmNwYnVuZGxlAAAKAAAAAQEAADExLTA4LTIwMTcAAA4AAAABAQAAT3JpZ2luYWwgTWVkaWEAAB8AAAABAQAAR2hvc3QgaW4gdGhlIFNoZWxsIGludHJvIEhELm1wNAAcAAAAAQYAABAAAAAgAAAALAAAAEAAAABcAAAAcAAAAIgAAAAIAAAABAMAAJpcAAADAAAACAAAAAQDAAACAAAAAAAAAAgAAAAEAwAAvTMOAAAAAAAIAAAABAMAALMzDgAAAAAACAAAAAQDAAC4Mw4AAAAAAAgAAAAEAwAAujMOAAAAAAAIAAAABAMAAAgTFwAAAAAAHAAAAAEGAADUAAAA5AAAAPQAAAAEAQAAFAEAACQBAAA0AQAACAAAAAAEAABBwSPewoAAABgAAAABAgAAAQAAAAAAAAAPAAAAAAAAAAAAAAAAAAAAEwAAAAEJAABmaWxlOi8vL1ZvbHVtZXMvREIvAAgAAAAEAwAAACCASegAAAAIAAAAAAQAAEG/s1PaAAAAJAAAAAEBAABDODYwNTY1OC04OTM5LTM0MDctQUFDRS01RkU4NDM0QzA2NzUYAAAAAQIAAIEAAAABAAAA7xMAAAEAAAAAAAAAAAAAAAsAAAABAQAAL1ZvbHVtZXMvREIACAAAAAEJAABmaWxlOi8vLwIAAAABAQAATTIAAAgAAAAEAwAAAMA/ZHQAAAAIAAAAAAQAAEHBtwCFupJDJAAAAAEBAAA5QTRGQkUxQS1DN0YzLTRERTYtODI4NC00NzEwMTAyQTU4RTEBAAAAAQEAAC8AAABgAAAA/v///wDwAAAAAAAABwAAAAIgAACcAgAAAAAAAAUgAAA0AgAAAAAAABAgAABEAgAAAAAAABEgAABwAgAAAAAAABIgAABQAgAAAAAAABMgAABgAgAAAAAAACAgAAAAAgAAAAAAAAQAAAADAwAAAPAAAAQAAAADAwAAAAAAAAQAAAADAwAAAQAAACAAAAABBgAAEAMAABwDAAAoAwAAHAMAABwDAAAcAwAAHAMAABwDAACoAAAA/v///wEAAACoAgAADQAAAAQQAACwAAAAAAAAAAUQAABEAQAAAAAAABAQAAB4AQAAAAAAAEAQAABoAQAAAAAAAAAgAAA0AwAAAAAAAAIgAAAgAgAAAAAAAAUgAACYAQAAAAAAABAgAAAgAAAAAAAAABEgAADUAQAAAAAAABIgAAC0AQAAAAAAABMgAADEAQAAAAAAACAgAAAAAgAAAAAAABDQAAAEAAAAAAAAAA==
+			</bookmark>
+			<metadata>
+				<md key="com.apple.proapps.spotlight.kMDItemCodecs">
+					<array>
+						<string>
+							'avc1'
+						</string>
+						<string>
+							AAC
+						</string>
+					</array>
+				</md>
+			</metadata>
+		</asset>
+		<asset id="r4" name="talisman stallion 2" uid="A5A92F0A175AE78200A080294965245D" src="file:///Volumes/DB/final%20cut/Untitled.fcpbundle/11-08-2017/Original%20Media/talisman%20stallion%202.wav" start="0s" duration="6318806/44100s" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+			<bookmark>
+				Ym9vazQEAAAAAAQQMAAAAAexd7XLaQRaogCU24CMJ6G9Ev0ad7dDWtPJPSQMQXiKVAMAAAQAAAADAwAAABgAKAcAAAABAQAAVm9sdW1lcwACAAAAAQEAAERCAAAJAAAAAQEAAGZpbmFsIGN1dAAAABIAAAABAQAAVW50aXRsZWQuZmNwYnVuZGxlAAAKAAAAAQEAADExLTA4LTIwMTcAAA4AAAABAQAAT3JpZ2luYWwgTWVkaWEAABcAAAABAQAAdGFsaXNtYW4gc3RhbGxpb24gMi53YXYAHAAAAAEGAAAQAAAAIAAAACwAAABAAAAAXAAAAHAAAACIAAAACAAAAAQDAACaXAAAAwAAAAgAAAAEAwAAAgAAAAAAAAAIAAAABAMAAL0zDgAAAAAACAAAAAQDAACzMw4AAAAAAAgAAAAEAwAAuDMOAAAAAAAIAAAABAMAALozDgAAAAAACAAAAAQDAACHEhcAAAAAABwAAAABBgAAzAAAANwAAADsAAAA/AAAAAwBAAAcAQAALAEAAAgAAAAABAAAQcEj2VmAAAAYAAAAAQIAAAEAAAAAAAAADwAAAAAAAAAAAAAAAAAAABMAAAABCQAAZmlsZTovLy9Wb2x1bWVzL0RCLwAIAAAABAMAAAAggEnoAAAACAAAAAAEAABBv7NT2gAAACQAAAABAQAAQzg2MDU2NTgtODkzOS0zNDA3LUFBQ0UtNUZFODQzNEMwNjc1GAAAAAECAACBAAAAAQAAAO8TAAABAAAAAAAAAAAAAAALAAAAAQEAAC9Wb2x1bWVzL0RCAAgAAAABCQAAZmlsZTovLy8CAAAAAQEAAE0yAAAIAAAABAMAAADAP2R0AAAACAAAAAAEAABBwbcAhbqSQyQAAAABAQAAOUE0RkJFMUEtQzdGMy00REU2LTgyODQtNDcxMDEwMkE1OEUxAQAAAAEBAAAvAAAAYAAAAP7///8A8AAAAAAAAAcAAAACIAAAlAIAAAAAAAAFIAAALAIAAAAAAAAQIAAAPAIAAAAAAAARIAAAaAIAAAAAAAASIAAASAIAAAAAAAATIAAAWAIAAAAAAAAgIAAA+AEAAAAAAAAEAAAAAwMAAADwAAAEAAAAAwMAAAAAAAAEAAAAAwMAAAEAAAAgAAAAAQYAAAgDAAAUAwAAIAMAABQDAAAUAwAAFAMAABQDAAAUAwAAqAAAAP7///8BAAAAoAIAAA0AAAAEEAAAqAAAAAAAAAAFEAAAPAEAAAAAAAAQEAAAcAEAAAAAAABAEAAAYAEAAAAAAAAAIAAALAMAAAAAAAACIAAAGAIAAAAAAAAFIAAAkAEAAAAAAAAQIAAAIAAAAAAAAAARIAAAzAEAAAAAAAASIAAArAEAAAAAAAATIAAAvAEAAAAAAAAgIAAA+AEAAAAAAAAQ0AAABAAAAAAAAAA=
+			</bookmark>
+		</asset>
+		<asset id="r5" name="EA4AAE76-E044-4A1F-8F44-4A09ABC2F302" uid="7B792E462D0F8AD7B65A8A9F207B3C54" src="file:///Volumes/DB/final%20cut/Untitled.fcpbundle/11-08-2017/Original%20Media/EA4AAE76-E044-4A1F-8F44-4A09ABC2F302.mp4" start="0s" duration="640988/29869s" hasVideo="1" format="r6" hasAudio="1" audioSources="1" audioChannels="1" audioRate="44100">
+			<bookmark>
+				Ym9va0QEAAAAAAQQMAAAAKvhtfsmvvVMuUVNnXLYcmn9X0wd4wNGPWneeRRRuRj5ZAMAAAQAAAADAwAAABgAKAcAAAABAQAAVm9sdW1lcwACAAAAAQEAAERCAAAJAAAAAQEAAGZpbmFsIGN1dAAAABIAAAABAQAAVW50aXRsZWQuZmNwYnVuZGxlAAAKAAAAAQEAADExLTA4LTIwMTcAAA4AAAABAQAAT3JpZ2luYWwgTWVkaWEAACgAAAABAQAARUE0QUFFNzYtRTA0NC00QTFGLThGNDQtNEEwOUFCQzJGMzAyLm1wNBwAAAABBgAAEAAAACAAAAAsAAAAQAAAAFwAAABwAAAAiAAAAAgAAAAEAwAAmlwAAAMAAAAIAAAABAMAAAIAAAAAAAAACAAAAAQDAAC9Mw4AAAAAAAgAAAAEAwAAszMOAAAAAAAIAAAABAMAALgzDgAAAAAACAAAAAQDAAC6Mw4AAAAAAAgAAAAEAwAAk3ctAAAAAAAcAAAAAQYAANwAAADsAAAA/AAAAAwBAAAcAQAALAEAADwBAAAIAAAAAAQAAEHAQVEKAAAAGAAAAAECAAABAAAAAAAAAA8AAAAAAAAAAAAAAAAAAAATAAAAAQkAAGZpbGU6Ly8vVm9sdW1lcy9EQi8ACAAAAAQDAAAAIIBJ6AAAAAgAAAAABAAAQb+zU9oAAAAkAAAAAQEAAEM4NjA1NjU4LTg5MzktMzQwNy1BQUNFLTVGRTg0MzRDMDY3NRgAAAABAgAAgQAAAAEAAADvEwAAAQAAAAAAAAAAAAAACwAAAAEBAAAvVm9sdW1lcy9EQgAIAAAAAQkAAGZpbGU6Ly8vAgAAAAEBAABNMgAACAAAAAQDAAAAwD9kdAAAAAgAAAAABAAAQcG3AIW6kkMkAAAAAQEAADlBNEZCRTFBLUM3RjMtNERFNi04Mjg0LTQ3MTAxMDJBNThFMQEAAAABAQAALwAAAGAAAAD+////APAAAAAAAAAHAAAAAiAAAKQCAAAAAAAABSAAADwCAAAAAAAAECAAAEwCAAAAAAAAESAAAHgCAAAAAAAAEiAAAFgCAAAAAAAAEyAAAGgCAAAAAAAAICAAAAgCAAAAAAAABAAAAAMDAAAA8AAABAAAAAMDAAAAAAAABAAAAAMDAAABAAAAIAAAAAEGAAAYAwAAJAMAADADAAAkAwAAJAMAACQDAAAkAwAAJAMAAKgAAAD+////AQAAALACAAANAAAABBAAALgAAAAAAAAABRAAAEwBAAAAAAAAEBAAAIABAAAAAAAAQBAAAHABAAAAAAAAACAAADwDAAAAAAAAAiAAACgCAAAAAAAABSAAAKABAAAAAAAAECAAACAAAAAAAAAAESAAANwBAAAAAAAAEiAAALwBAAAAAAAAEyAAAMwBAAAAAAAAICAAAAgCAAAAAAAAENAAAAQAAAAAAAAA
+			</bookmark>
+			<metadata>
+				<md key="com.apple.proapps.spotlight.kMDItemCodecs">
+					<array>
+						<string>
+							'avc1'
+						</string>
+						<string>
+							AAC
+						</string>
+					</array>
+				</md>
+			</metadata>
+		</asset>
+		<format id="r6" frameDuration="1000/29869s" width="1920" height="1080" colorSpace="1-1-1 (Rec. 709)" />
+		<format id="r7" name="FFVideoFormat720p2398" frameDuration="1001/24000s" width="1280" height="720" colorSpace="1-1-1 (Rec. 709)" />
+		<asset id="r8" name="ghost in a Shell AMV  Edit" uid="4F4A1795D9CC161508F432F9361F6248" src="file:///Volumes/DB/final%20cut/Untitled.fcpbundle/11-08-2017/Original%20Media/ghost%20in%20a%20Shell%20AMV%20%20Edit.mp4" start="0s" duration="15933/1000s" hasVideo="1" format="r7" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+			<bookmark>
+				Ym9vazwEAAAAAAQQMAAAALEzoFcoFxtseUU43Qahn1yt4Zo+y8/el4dZgKjbq3HpXAMAAAQAAAADAwAAABgAKAcAAAABAQAAVm9sdW1lcwACAAAAAQEAAERCAAAJAAAAAQEAAGZpbmFsIGN1dAAAABIAAAABAQAAVW50aXRsZWQuZmNwYnVuZGxlAAAKAAAAAQEAADExLTA4LTIwMTcAAA4AAAABAQAAT3JpZ2luYWwgTWVkaWEAAB4AAAABAQAAZ2hvc3QgaW4gYSBTaGVsbCBBTVYgIEVkaXQubXA0AAAcAAAAAQYAABAAAAAgAAAALAAAAEAAAABcAAAAcAAAAIgAAAAIAAAABAMAAJpcAAADAAAACAAAAAQDAAACAAAAAAAAAAgAAAAEAwAAvTMOAAAAAAAIAAAABAMAALMzDgAAAAAACAAAAAQDAAC4Mw4AAAAAAAgAAAAEAwAAujMOAAAAAAAIAAAABAMAACAWFwAAAAAAHAAAAAEGAADUAAAA5AAAAPQAAAAEAQAAFAEAACQBAAA0AQAACAAAAAAEAABBwSPiqQAAABgAAAABAgAAAQAAAAAAAAAPAAAAAAAAAAAAAAAAAAAAEwAAAAEJAABmaWxlOi8vL1ZvbHVtZXMvREIvAAgAAAAEAwAAACCASegAAAAIAAAAAAQAAEG/s1PaAAAAJAAAAAEBAABDODYwNTY1OC04OTM5LTM0MDctQUFDRS01RkU4NDM0QzA2NzUYAAAAAQIAAIEAAAABAAAA7xMAAAEAAAAAAAAAAAAAAAsAAAABAQAAL1ZvbHVtZXMvREIACAAAAAEJAABmaWxlOi8vLwIAAAABAQAATTIAAAgAAAAEAwAAAMA/ZHQAAAAIAAAAAAQAAEHBtwCFupJDJAAAAAEBAAA5QTRGQkUxQS1DN0YzLTRERTYtODI4NC00NzEwMTAyQTU4RTEBAAAAAQEAAC8AAABgAAAA/v///wDwAAAAAAAABwAAAAIgAACcAgAAAAAAAAUgAAA0AgAAAAAAABAgAABEAgAAAAAAABEgAABwAgAAAAAAABIgAABQAgAAAAAAABMgAABgAgAAAAAAACAgAAAAAgAAAAAAAAQAAAADAwAAAPAAAAQAAAADAwAAAAAAAAQAAAADAwAAAQAAACAAAAABBgAAEAMAABwDAAAoAwAAHAMAABwDAAAcAwAAHAMAABwDAACoAAAA/v///wEAAACoAgAADQAAAAQQAACwAAAAAAAAAAUQAABEAQAAAAAAABAQAAB4AQAAAAAAAEAQAABoAQAAAAAAAAAgAAA0AwAAAAAAAAIgAAAgAgAAAAAAAAUgAACYAQAAAAAAABAgAAAgAAAAAAAAABEgAADUAQAAAAAAABIgAAC0AQAAAAAAABMgAADEAQAAAAAAACAgAAAAAgAAAAAAABDQAAAEAAAAAAAAAA==
+			</bookmark>
+			<metadata>
+				<md key="com.apple.proapps.spotlight.kMDItemCodecs">
+					<array>
+						<string>
+							'avc1'
+						</string>
+						<string>
+							AAC
+						</string>
+					</array>
+				</md>
+			</metadata>
+		</asset>
+	</resources>
+	<library location="file:///Volumes/DB/final%20cut/Untitled.fcpbundle/">
+		<event name="11-08-2017" uid="7D59C36E-A218-4896-AFC1-647E91CBDF67">
+			<project name="Talisman Stallions" uid="4F89BF09-DBCF-4F09-A86F-0ED256182CF7" modDate="2020-07-26 18:38:19 +0200">
+				<sequence duration="95195113/720000s" format="r1" tcStart="0s" tcFormat="NDF" audioLayout="stereo" audioRate="44.1k">
+					<spine>
+						<clip name="Ghost in the Shell intro HD" offset="0s" duration="21300/6000s" start="192500/6000s" format="r2" tcFormat="NDF">
+							<conform-rate srcFrameRate="25" scaleEnabled="0" />
+							<video offset="0s" ref="r3" duration="17852400/90000s" />
+							<asset-clip name="talisman stallion 2" lane="-1" offset="23100000/720000s" ref="r4" duration="95195113/720000s" start="5323276/720000s" audioRole="dialogue" format="r1">
+								<audio-channel-source role="music.music-1" srcCh="1, 2" />
+							</asset-clip>
+						</clip>
+						<clip name="Ghost in the Shell intro HD" offset="21300/6000s" duration="20800/6000s" start="368456/6000s" format="r2" tcFormat="NDF">
+							<conform-rate srcFrameRate="25" scaleEnabled="0" />
+							<timeMap>
+								<timept time="0s" value="0s" interp="smooth2" />
+								<timept time="19782929/90000s" value="17852400/90000s" interp="smooth2" />
+							</timeMap>
+							<video offset="0s" ref="r3" duration="17852400/90000s" />
+						</clip>
+						<clip name="Ghost in the Shell intro HD" offset="42100/6000s" duration="44600/12000s" start="417000/6000s" format="r2" tcFormat="NDF">
+							<conform-rate srcFrameRate="25" scaleEnabled="0" />
+							<video offset="0s" ref="r3" duration="17852400/90000s" />
+						</clip>
+						<clip name="Ghost in the Shell intro HD" offset="128800/12000s" duration="43000/12000s" start="879200/12000s" format="r2" tcFormat="NDF">
+							<conform-rate srcFrameRate="25" scaleEnabled="0" />
+							<video offset="0s" ref="r3" duration="17852400/90000s" />
+						</clip>
+						<clip name="Ghost in the Shell intro HD" offset="171800/12000s" duration="20600/12000s" start="1334000/12000s" format="r2" tcFormat="NDF">
+							<conform-rate srcFrameRate="25" scaleEnabled="0" />
+							<video offset="0s" ref="r3" duration="17852400/90000s" />
+						</clip>
+						<asset-clip name="MOV_0057.mp4" offset="192400/12000s" ref="r5" duration="14000/6000s" start="66900/6000s" audioRole="dialogue" format="r6" tcFormat="NDF">
+							<conform-rate scaleEnabled="0" />
+						</asset-clip>
+						<clip name="Ghost in the Shell intro HD" offset="220400/12000s" duration="17200/12000s" start="1360200/12000s" format="r2" tcFormat="NDF">
+							<conform-rate srcFrameRate="25" scaleEnabled="0" />
+							<video offset="0s" ref="r3" duration="17852400/90000s" />
+						</clip>
+						<clip name="Ghost in the Shell intro HD" offset="237600/12000s" duration="41200/12000s" start="950800/6000s" format="r2" tcFormat="NDF">
+							<conform-rate srcFrameRate="25" scaleEnabled="0" />
+							<video offset="0s" ref="r3" duration="17852400/90000s" />
+						</clip>
+						<clip name="Ghost in the Shell intro HD" offset="278800/12000s" duration="46600/12000s" start="1943400/12000s" format="r2" tcFormat="NDF">
+							<conform-rate srcFrameRate="25" scaleEnabled="0" />
+							<video offset="0s" ref="r3" duration="17852400/90000s" />
+						</clip>
+						<clip name="Ghost in the Shell intro HD" offset="325400/12000s" duration="43800/12000s" start="2245000/12000s" format="r2" tcFormat="NDF">
+							<conform-rate srcFrameRate="25" scaleEnabled="0" />
+							<video offset="0s" ref="r3" duration="17852400/90000s" />
+						</clip>
+						<clip name="ghost in a Shell AMV  Edit" offset="369200/12000s" duration="10500/6000s" start="18974/6000s" format="r7" tcFormat="NDF">
+							<conform-rate srcFrameRate="23.98" scaleEnabled="0" />
+							<timeMap>
+								<timept time="0s" value="0s" interp="smooth2" />
+								<timept time="700055/24000s" value="382382/24000s" interp="smooth2" />
+							</timeMap>
+							<video offset="0s" ref="r8" duration="382382/24000s" />
+							<marker start="17281/2000s" duration="100/6000s" value="Marker 2" />
+							<marker start="22841/2000s" duration="100/6000s" value="Marker 1" />
+						</clip>
+						<clip name="ghost in a Shell AMV  Edit" offset="390200/12000s" duration="30600/12000s" start="45016/12000s" format="r7" tcFormat="NDF">
+							<conform-rate srcFrameRate="23.98" scaleEnabled="0" />
+							<timeMap>
+								<timept time="0s" value="0s" interp="smooth2" />
+								<timept time="531578/24000s" value="382382/24000s" interp="smooth2" />
+							</timeMap>
+							<video offset="0s" ref="r8" duration="382382/24000s" />
+							<marker start="6561/1000s" duration="100/6000s" value="Marker 2" />
+							<marker start="1084/125s" duration="100/6000s" value="Marker 1" />
+						</clip>
+						<clip name="Ghost in the Shell intro HD" offset="420800/12000s" duration="1600/6000s" start="19686/6000s" format="r2" tcFormat="NDF">
+							<conform-rate srcFrameRate="25" scaleEnabled="0" />
+							<timeMap>
+								<timept time="0s" value="0s" interp="smooth2" />
+								<timept time="2904503/90000s" value="17852400/90000s" interp="smooth2" />
+							</timeMap>
+							<video offset="0s" ref="r3" duration="17852400/90000s" />
+						</clip>
+						<clip name="ghost in a Shell AMV  Edit" offset="424000/12000s" duration="25400/12000s" start="75194/12000s" format="r7" tcFormat="NDF">
+							<conform-rate srcFrameRate="23.98" scaleEnabled="0" />
+							<timeMap>
+								<timept time="0s" value="0s" interp="smooth2" />
+								<timept time="509035/24000s" value="382382/24000s" interp="smooth2" />
+							</timeMap>
+							<video offset="0s" ref="r8" duration="382382/24000s" />
+							<marker start="37697/6000s" duration="100/6000s" value="Marker 2" />
+							<marker start="1993/240s" duration="100/6000s" value="Marker 1" />
+						</clip>
+						<clip name="ghost in a Shell AMV  Edit" offset="449400/12000s" duration="2600/6000s" start="6908/6000s" format="r7" tcFormat="NDF">
+							<conform-rate srcFrameRate="23.98" scaleEnabled="0" />
+							<timeMap>
+								<timept time="0s" value="0s" interp="smooth2" />
+								<timept time="531578/24000s" value="382382/24000s" interp="smooth2" />
+							</timeMap>
+							<video offset="0s" ref="r8" duration="382382/24000s" />
+							<marker start="6561/1000s" duration="100/6000s" value="Marker 2" />
+							<marker start="1084/125s" duration="100/6000s" value="Marker 1" />
+						</clip>
+						<clip name="Ghost in the Shell intro HD" offset="454600/12000s" duration="22000/12000s" start="2245000/12000s" format="r2" tcFormat="NDF">
+							<conform-rate srcFrameRate="25" scaleEnabled="0" />
+							<video offset="0s" ref="r3" duration="17852400/90000s" />
+						</clip>
+						<clip name="ghost in a Shell AMV  Edit" offset="476600/12000s" duration="30600/12000s" start="45016/12000s" format="r7" tcFormat="NDF">
+							<conform-rate srcFrameRate="23.98" scaleEnabled="0" />
+							<timeMap>
+								<timept time="0s" value="0s" interp="smooth2" />
+								<timept time="531578/24000s" value="382382/24000s" interp="smooth2" />
+							</timeMap>
+							<video offset="0s" ref="r8" duration="382382/24000s" />
+							<marker start="6561/1000s" duration="100/6000s" value="Marker 2" />
+							<marker start="1084/125s" duration="100/6000s" value="Marker 1" />
+						</clip>
+						<clip name="Ghost in the Shell intro HD" offset="507200/12000s" duration="1600/6000s" start="19686/6000s" format="r2" tcFormat="NDF">
+							<conform-rate srcFrameRate="25" scaleEnabled="0" />
+							<timeMap>
+								<timept time="0s" value="0s" interp="smooth2" />
+								<timept time="2904503/90000s" value="17852400/90000s" interp="smooth2" />
+							</timeMap>
+							<video offset="0s" ref="r3" duration="17852400/90000s" />
+						</clip>
+						<clip name="ghost in a Shell AMV  Edit" offset="510400/12000s" duration="25400/12000s" start="75194/12000s" format="r7" tcFormat="NDF">
+							<conform-rate srcFrameRate="23.98" scaleEnabled="0" />
+							<timeMap>
+								<timept time="0s" value="0s" interp="smooth2" />
+								<timept time="509035/24000s" value="382382/24000s" interp="smooth2" />
+							</timeMap>
+							<video offset="0s" ref="r8" duration="382382/24000s" />
+							<marker start="37697/6000s" duration="100/6000s" value="Marker 2" />
+							<marker start="1993/240s" duration="100/6000s" value="Marker 1" />
+						</clip>
+						<clip name="ghost in a Shell AMV  Edit" offset="535800/12000s" duration="2600/6000s" start="6908/6000s" format="r7" tcFormat="NDF">
+							<conform-rate srcFrameRate="23.98" scaleEnabled="0" />
+							<timeMap>
+								<timept time="0s" value="0s" interp="smooth2" />
+								<timept time="531578/24000s" value="382382/24000s" interp="smooth2" />
+							</timeMap>
+							<video offset="0s" ref="r8" duration="382382/24000s" />
+							<marker start="6561/1000s" duration="100/6000s" value="Marker 2" />
+							<marker start="1084/125s" duration="100/6000s" value="Marker 1" />
+						</clip>
+						<clip name="ghost in a Shell AMV  Edit" offset="541000/12000s" duration="10500/6000s" start="18974/6000s" format="r7" tcFormat="NDF">
+							<conform-rate srcFrameRate="23.98" scaleEnabled="0" />
+							<timeMap>
+								<timept time="0s" value="0s" interp="smooth2" />
+								<timept time="700055/24000s" value="382382/24000s" interp="smooth2" />
+							</timeMap>
+							<video offset="0s" ref="r8" duration="382382/24000s" />
+							<marker start="17281/2000s" duration="100/6000s" value="Marker 2" />
+							<marker start="22841/2000s" duration="100/6000s" value="Marker 1" />
+						</clip>
+						<clip name="ghost in a Shell AMV  Edit" offset="562000/12000s" duration="30600/12000s" start="45016/12000s" format="r7" tcFormat="NDF">
+							<conform-rate srcFrameRate="23.98" scaleEnabled="0" />
+							<timeMap>
+								<timept time="0s" value="0s" interp="smooth2" />
+								<timept time="531578/24000s" value="382382/24000s" interp="smooth2" />
+							</timeMap>
+							<video offset="0s" ref="r8" duration="382382/24000s" />
+							<marker start="6561/1000s" duration="100/6000s" value="Marker 2" />
+							<marker start="1084/125s" duration="100/6000s" value="Marker 1" />
+						</clip>
+						<clip name="Ghost in the Shell intro HD" offset="592600/12000s" duration="1600/6000s" start="19686/6000s" format="r2" tcFormat="NDF">
+							<conform-rate srcFrameRate="25" scaleEnabled="0" />
+							<timeMap>
+								<timept time="0s" value="0s" interp="smooth2" />
+								<timept time="2904503/90000s" value="17852400/90000s" interp="smooth2" />
+							</timeMap>
+							<video offset="0s" ref="r3" duration="17852400/90000s" />
+						</clip>
+						<clip name="ghost in a Shell AMV  Edit" offset="595800/12000s" duration="25400/12000s" start="75194/12000s" format="r7" tcFormat="NDF">
+							<conform-rate srcFrameRate="23.98" scaleEnabled="0" />
+							<timeMap>
+								<timept time="0s" value="0s" interp="smooth2" />
+								<timept time="509035/24000s" value="382382/24000s" interp="smooth2" />
+							</timeMap>
+							<video offset="0s" ref="r8" duration="382382/24000s" />
+							<marker start="37697/6000s" duration="100/6000s" value="Marker 2" />
+							<marker start="1993/240s" duration="100/6000s" value="Marker 1" />
+						</clip>
+						<clip name="ghost in a Shell AMV  Edit" offset="621200/12000s" duration="2600/6000s" start="6908/6000s" format="r7" tcFormat="NDF">
+							<conform-rate srcFrameRate="23.98" scaleEnabled="0" />
+							<timeMap>
+								<timept time="0s" value="0s" interp="smooth2" />
+								<timept time="531578/24000s" value="382382/24000s" interp="smooth2" />
+							</timeMap>
+							<video offset="0s" ref="r8" duration="382382/24000s" />
+							<marker start="6561/1000s" duration="100/6000s" value="Marker 2" />
+							<marker start="1084/125s" duration="100/6000s" value="Marker 1" />
+						</clip>
+						<clip name="Ghost in the Shell intro HD" offset="626400/12000s" duration="22000/12000s" start="2245000/12000s" format="r2" tcFormat="NDF">
+							<conform-rate srcFrameRate="25" scaleEnabled="0" />
+							<video offset="0s" ref="r3" duration="17852400/90000s" />
+						</clip>
+						<clip name="ghost in a Shell AMV  Edit" offset="648400/12000s" duration="30600/12000s" start="45016/12000s" format="r7" tcFormat="NDF">
+							<conform-rate srcFrameRate="23.98" scaleEnabled="0" />
+							<timeMap>
+								<timept time="0s" value="0s" interp="smooth2" />
+								<timept time="531578/24000s" value="382382/24000s" interp="smooth2" />
+							</timeMap>
+							<video offset="0s" ref="r8" duration="382382/24000s" />
+							<marker start="6561/1000s" duration="100/6000s" value="Marker 2" />
+							<marker start="1084/125s" duration="100/6000s" value="Marker 1" />
+						</clip>
+						<clip name="Ghost in the Shell intro HD" offset="679000/12000s" duration="1600/6000s" start="19686/6000s" format="r2" tcFormat="NDF">
+							<conform-rate srcFrameRate="25" scaleEnabled="0" />
+							<timeMap>
+								<timept time="0s" value="0s" interp="smooth2" />
+								<timept time="2904503/90000s" value="17852400/90000s" interp="smooth2" />
+							</timeMap>
+							<video offset="0s" ref="r3" duration="17852400/90000s" />
+						</clip>
+						<clip name="ghost in a Shell AMV  Edit" offset="682200/12000s" duration="25400/12000s" start="75194/12000s" format="r7" tcFormat="NDF">
+							<conform-rate srcFrameRate="23.98" scaleEnabled="0" />
+							<timeMap>
+								<timept time="0s" value="0s" interp="smooth2" />
+								<timept time="509035/24000s" value="382382/24000s" interp="smooth2" />
+							</timeMap>
+							<video offset="0s" ref="r8" duration="382382/24000s" />
+							<marker start="37697/6000s" duration="100/6000s" value="Marker 2" />
+							<marker start="1993/240s" duration="100/6000s" value="Marker 1" />
+						</clip>
+						<clip name="ghost in a Shell AMV  Edit" offset="707600/12000s" duration="2600/6000s" start="6908/6000s" format="r7" tcFormat="NDF">
+							<conform-rate srcFrameRate="23.98" scaleEnabled="0" />
+							<timeMap>
+								<timept time="0s" value="0s" interp="smooth2" />
+								<timept time="531578/24000s" value="382382/24000s" interp="smooth2" />
+							</timeMap>
+							<video offset="0s" ref="r8" duration="382382/24000s" />
+							<marker start="6561/1000s" duration="100/6000s" value="Marker 2" />
+							<marker start="1084/125s" duration="100/6000s" value="Marker 1" />
+						</clip>
+						<gap name="Gap" offset="712800/12000s" duration="200/6000s" start="3600s" />
+						<clip name="Ghost in the Shell intro HD" offset="713200/12000s" duration="21300/6000s" start="192500/6000s" format="r2" tcFormat="NDF">
+							<conform-rate srcFrameRate="25" scaleEnabled="0" />
+							<video offset="0s" ref="r3" duration="17852400/90000s" />
+						</clip>
+						<clip name="Ghost in the Shell intro HD" offset="755800/12000s" duration="20800/6000s" start="368456/6000s" format="r2" tcFormat="NDF">
+							<conform-rate srcFrameRate="25" scaleEnabled="0" />
+							<timeMap>
+								<timept time="0s" value="0s" interp="smooth2" />
+								<timept time="19782929/90000s" value="17852400/90000s" interp="smooth2" />
+							</timeMap>
+							<video offset="0s" ref="r3" duration="17852400/90000s" />
+						</clip>
+						<clip name="Ghost in the Shell intro HD" offset="797400/12000s" duration="44600/12000s" start="417000/6000s" format="r2" tcFormat="NDF">
+							<conform-rate srcFrameRate="25" scaleEnabled="0" />
+							<video offset="0s" ref="r3" duration="17852400/90000s" />
+						</clip>
+						<clip name="Ghost in the Shell intro HD" offset="842000/12000s" duration="43000/12000s" start="879200/12000s" format="r2" tcFormat="NDF">
+							<conform-rate srcFrameRate="25" scaleEnabled="0" />
+							<video offset="0s" ref="r3" duration="17852400/90000s" />
+						</clip>
+						<clip name="Ghost in the Shell intro HD" offset="885000/12000s" duration="20600/12000s" start="1334000/12000s" format="r2" tcFormat="NDF">
+							<conform-rate srcFrameRate="25" scaleEnabled="0" />
+							<video offset="0s" ref="r3" duration="17852400/90000s" />
+						</clip>
+						<clip name="Ghost in the Shell intro HD" offset="905600/12000s" duration="17200/12000s" start="1360200/12000s" format="r2" tcFormat="NDF">
+							<conform-rate srcFrameRate="25" scaleEnabled="0" />
+							<video offset="0s" ref="r3" duration="17852400/90000s" />
+						</clip>
+						<clip name="Ghost in the Shell intro HD" offset="922800/12000s" duration="41200/12000s" start="950800/6000s" format="r2" tcFormat="NDF">
+							<conform-rate srcFrameRate="25" scaleEnabled="0" />
+							<video offset="0s" ref="r3" duration="17852400/90000s" />
+						</clip>
+						<clip name="Ghost in the Shell intro HD" offset="964000/12000s" duration="46600/12000s" start="1943400/12000s" format="r2" tcFormat="NDF">
+							<conform-rate srcFrameRate="25" scaleEnabled="0" />
+							<video offset="0s" ref="r3" duration="17852400/90000s" />
+						</clip>
+						<clip name="Ghost in the Shell intro HD" offset="1010600/12000s" duration="45800/12000s" start="2245000/12000s" format="r2" tcFormat="NDF">
+							<conform-rate srcFrameRate="25" scaleEnabled="0" />
+							<video offset="0s" ref="r3" duration="17852400/90000s" />
+						</clip>
+						<clip name="ghost in a Shell AMV  Edit" offset="1056400/12000s" duration="10500/6000s" start="18974/6000s" format="r7" tcFormat="NDF">
+							<conform-rate srcFrameRate="23.98" scaleEnabled="0" />
+							<timeMap>
+								<timept time="0s" value="0s" interp="smooth2" />
+								<timept time="700055/24000s" value="382382/24000s" interp="smooth2" />
+							</timeMap>
+							<video offset="0s" ref="r8" duration="382382/24000s" />
+							<marker start="17281/2000s" duration="100/6000s" value="Marker 2" />
+							<marker start="22841/2000s" duration="100/6000s" value="Marker 1" />
+						</clip>
+						<clip name="ghost in a Shell AMV  Edit" offset="1077400/12000s" duration="30600/12000s" start="45016/12000s" format="r7" tcFormat="NDF">
+							<conform-rate srcFrameRate="23.98" scaleEnabled="0" />
+							<timeMap>
+								<timept time="0s" value="0s" interp="smooth2" />
+								<timept time="531578/24000s" value="382382/24000s" interp="smooth2" />
+							</timeMap>
+							<video offset="0s" ref="r8" duration="382382/24000s" />
+							<marker start="6561/1000s" duration="100/6000s" value="Marker 2" />
+							<marker start="1084/125s" duration="100/6000s" value="Marker 1" />
+						</clip>
+						<clip name="Ghost in the Shell intro HD" offset="1108000/12000s" duration="1600/6000s" start="19686/6000s" format="r2" tcFormat="NDF">
+							<conform-rate srcFrameRate="25" scaleEnabled="0" />
+							<timeMap>
+								<timept time="0s" value="0s" interp="smooth2" />
+								<timept time="2904503/90000s" value="17852400/90000s" interp="smooth2" />
+							</timeMap>
+							<video offset="0s" ref="r3" duration="17852400/90000s" />
+						</clip>
+						<clip name="ghost in a Shell AMV  Edit" offset="1111200/12000s" duration="25400/12000s" start="75194/12000s" format="r7" tcFormat="NDF">
+							<conform-rate srcFrameRate="23.98" scaleEnabled="0" />
+							<timeMap>
+								<timept time="0s" value="0s" interp="smooth2" />
+								<timept time="509035/24000s" value="382382/24000s" interp="smooth2" />
+							</timeMap>
+							<video offset="0s" ref="r8" duration="382382/24000s" />
+							<marker start="37697/6000s" duration="100/6000s" value="Marker 2" />
+							<marker start="1993/240s" duration="100/6000s" value="Marker 1" />
+						</clip>
+						<clip name="ghost in a Shell AMV  Edit" offset="1136600/12000s" duration="2600/6000s" start="6908/6000s" format="r7" tcFormat="NDF">
+							<conform-rate srcFrameRate="23.98" scaleEnabled="0" />
+							<timeMap>
+								<timept time="0s" value="0s" interp="smooth2" />
+								<timept time="531578/24000s" value="382382/24000s" interp="smooth2" />
+							</timeMap>
+							<video offset="0s" ref="r8" duration="382382/24000s" />
+							<marker start="6561/1000s" duration="100/6000s" value="Marker 2" />
+							<marker start="1084/125s" duration="100/6000s" value="Marker 1" />
+						</clip>
+						<clip name="Ghost in the Shell intro HD" offset="1141800/12000s" duration="22000/12000s" start="2245000/12000s" format="r2" tcFormat="NDF">
+							<conform-rate srcFrameRate="25" scaleEnabled="0" />
+							<video offset="0s" ref="r3" duration="17852400/90000s" />
+						</clip>
+						<clip name="ghost in a Shell AMV  Edit" offset="1163800/12000s" duration="30600/12000s" start="45016/12000s" format="r7" tcFormat="NDF">
+							<conform-rate srcFrameRate="23.98" scaleEnabled="0" />
+							<timeMap>
+								<timept time="0s" value="0s" interp="smooth2" />
+								<timept time="531578/24000s" value="382382/24000s" interp="smooth2" />
+							</timeMap>
+							<video offset="0s" ref="r8" duration="382382/24000s" />
+							<marker start="6561/1000s" duration="100/6000s" value="Marker 2" />
+							<marker start="1084/125s" duration="100/6000s" value="Marker 1" />
+						</clip>
+						<clip name="Ghost in the Shell intro HD" offset="1194400/12000s" duration="1600/6000s" start="19686/6000s" format="r2" tcFormat="NDF">
+							<conform-rate srcFrameRate="25" scaleEnabled="0" />
+							<timeMap>
+								<timept time="0s" value="0s" interp="smooth2" />
+								<timept time="2904503/90000s" value="17852400/90000s" interp="smooth2" />
+							</timeMap>
+							<video offset="0s" ref="r3" duration="17852400/90000s" />
+						</clip>
+						<clip name="ghost in a Shell AMV  Edit" offset="1197600/12000s" duration="25400/12000s" start="75194/12000s" format="r7" tcFormat="NDF">
+							<conform-rate srcFrameRate="23.98" scaleEnabled="0" />
+							<timeMap>
+								<timept time="0s" value="0s" interp="smooth2" />
+								<timept time="509035/24000s" value="382382/24000s" interp="smooth2" />
+							</timeMap>
+							<video offset="0s" ref="r8" duration="382382/24000s" />
+							<marker start="37697/6000s" duration="100/6000s" value="Marker 2" />
+							<marker start="1993/240s" duration="100/6000s" value="Marker 1" />
+						</clip>
+						<clip name="ghost in a Shell AMV  Edit" offset="1223000/12000s" duration="2600/6000s" start="6908/6000s" format="r7" tcFormat="NDF">
+							<conform-rate srcFrameRate="23.98" scaleEnabled="0" />
+							<timeMap>
+								<timept time="0s" value="0s" interp="smooth2" />
+								<timept time="531578/24000s" value="382382/24000s" interp="smooth2" />
+							</timeMap>
+							<video offset="0s" ref="r8" duration="382382/24000s" />
+							<marker start="6561/1000s" duration="100/6000s" value="Marker 2" />
+							<marker start="1084/125s" duration="100/6000s" value="Marker 1" />
+						</clip>
+						<clip name="ghost in a Shell AMV  Edit" offset="1228200/12000s" duration="10500/6000s" start="18974/6000s" format="r7" tcFormat="NDF">
+							<conform-rate srcFrameRate="23.98" scaleEnabled="0" />
+							<timeMap>
+								<timept time="0s" value="0s" interp="smooth2" />
+								<timept time="700055/24000s" value="382382/24000s" interp="smooth2" />
+							</timeMap>
+							<video offset="0s" ref="r8" duration="382382/24000s" />
+							<marker start="17281/2000s" duration="100/6000s" value="Marker 2" />
+							<marker start="22841/2000s" duration="100/6000s" value="Marker 1" />
+						</clip>
+						<clip name="ghost in a Shell AMV  Edit" offset="1249200/12000s" duration="30600/12000s" start="45016/12000s" format="r7" tcFormat="NDF">
+							<conform-rate srcFrameRate="23.98" scaleEnabled="0" />
+							<timeMap>
+								<timept time="0s" value="0s" interp="smooth2" />
+								<timept time="531578/24000s" value="382382/24000s" interp="smooth2" />
+							</timeMap>
+							<video offset="0s" ref="r8" duration="382382/24000s" />
+							<marker start="6561/1000s" duration="100/6000s" value="Marker 2" />
+							<marker start="1084/125s" duration="100/6000s" value="Marker 1" />
+						</clip>
+						<clip name="Ghost in the Shell intro HD" offset="1279800/12000s" duration="1600/6000s" start="19686/6000s" format="r2" tcFormat="NDF">
+							<conform-rate srcFrameRate="25" scaleEnabled="0" />
+							<timeMap>
+								<timept time="0s" value="0s" interp="smooth2" />
+								<timept time="2904503/90000s" value="17852400/90000s" interp="smooth2" />
+							</timeMap>
+							<video offset="0s" ref="r3" duration="17852400/90000s" />
+						</clip>
+						<clip name="ghost in a Shell AMV  Edit" offset="1283000/12000s" duration="25400/12000s" start="75194/12000s" format="r7" tcFormat="NDF">
+							<conform-rate srcFrameRate="23.98" scaleEnabled="0" />
+							<timeMap>
+								<timept time="0s" value="0s" interp="smooth2" />
+								<timept time="509035/24000s" value="382382/24000s" interp="smooth2" />
+							</timeMap>
+							<video offset="0s" ref="r8" duration="382382/24000s" />
+							<marker start="37697/6000s" duration="100/6000s" value="Marker 2" />
+							<marker start="1993/240s" duration="100/6000s" value="Marker 1" />
+						</clip>
+						<clip name="ghost in a Shell AMV  Edit" offset="1308400/12000s" duration="2600/6000s" start="6908/6000s" format="r7" tcFormat="NDF">
+							<conform-rate srcFrameRate="23.98" scaleEnabled="0" />
+							<timeMap>
+								<timept time="0s" value="0s" interp="smooth2" />
+								<timept time="531578/24000s" value="382382/24000s" interp="smooth2" />
+							</timeMap>
+							<video offset="0s" ref="r8" duration="382382/24000s" />
+							<marker start="6561/1000s" duration="100/6000s" value="Marker 2" />
+							<marker start="1084/125s" duration="100/6000s" value="Marker 1" />
+						</clip>
+						<clip name="Ghost in the Shell intro HD" offset="1313600/12000s" duration="22000/12000s" start="2245000/12000s" format="r2" tcFormat="NDF">
+							<conform-rate srcFrameRate="25" scaleEnabled="0" />
+							<video offset="0s" ref="r3" duration="17852400/90000s" />
+						</clip>
+						<clip name="ghost in a Shell AMV  Edit" offset="1335600/12000s" duration="30600/12000s" start="45016/12000s" format="r7" tcFormat="NDF">
+							<conform-rate srcFrameRate="23.98" scaleEnabled="0" />
+							<timeMap>
+								<timept time="0s" value="0s" interp="smooth2" />
+								<timept time="531578/24000s" value="382382/24000s" interp="smooth2" />
+							</timeMap>
+							<video offset="0s" ref="r8" duration="382382/24000s" />
+							<marker start="6561/1000s" duration="100/6000s" value="Marker 2" />
+							<marker start="1084/125s" duration="100/6000s" value="Marker 1" />
+						</clip>
+						<clip name="Ghost in the Shell intro HD" offset="1366200/12000s" duration="1600/6000s" start="19686/6000s" format="r2" tcFormat="NDF">
+							<conform-rate srcFrameRate="25" scaleEnabled="0" />
+							<timeMap>
+								<timept time="0s" value="0s" interp="smooth2" />
+								<timept time="2904503/90000s" value="17852400/90000s" interp="smooth2" />
+							</timeMap>
+							<video offset="0s" ref="r3" duration="17852400/90000s" />
+						</clip>
+						<clip name="ghost in a Shell AMV  Edit" offset="1369400/12000s" duration="25400/12000s" start="75194/12000s" format="r7" tcFormat="NDF">
+							<conform-rate srcFrameRate="23.98" scaleEnabled="0" />
+							<timeMap>
+								<timept time="0s" value="0s" interp="smooth2" />
+								<timept time="509035/24000s" value="382382/24000s" interp="smooth2" />
+							</timeMap>
+							<video offset="0s" ref="r8" duration="382382/24000s" />
+							<marker start="37697/6000s" duration="100/6000s" value="Marker 2" />
+							<marker start="1993/240s" duration="100/6000s" value="Marker 1" />
+						</clip>
+						<clip name="Ghost in the Shell intro HD" offset="1394800/12000s" duration="23800/12000s" start="1334000/12000s" format="r2" tcFormat="NDF">
+							<conform-rate srcFrameRate="25" scaleEnabled="0" />
+							<video offset="0s" ref="r3" duration="17852400/90000s" />
+						</clip>
+						<clip name="Ghost in the Shell intro HD" offset="1418600/12000s" duration="23800/12000s" start="1360200/12000s" format="r2" tcFormat="NDF">
+							<conform-rate srcFrameRate="25" scaleEnabled="0" />
+							<video offset="0s" ref="r3" duration="17852400/90000s" />
+						</clip>
+						<clip name="Ghost in the Shell intro HD" offset="1442400/12000s" duration="19200/12000s" start="950800/6000s" format="r2" tcFormat="NDF">
+							<conform-rate srcFrameRate="25" scaleEnabled="0" />
+							<video offset="0s" ref="r3" duration="17852400/90000s" />
+						</clip>
+						<clip name="Ghost in the Shell intro HD" offset="1461600/12000s" duration="26000/12000s" start="1943400/12000s" format="r2" tcFormat="NDF">
+							<conform-rate srcFrameRate="25" scaleEnabled="0" />
+							<video offset="0s" ref="r3" duration="17852400/90000s" />
+						</clip>
+						<clip name="Ghost in the Shell intro HD" offset="1487600/12000s" duration="98400/12000s" start="2245000/12000s" format="r2" tcFormat="NDF">
+							<conform-rate srcFrameRate="25" scaleEnabled="0" />
+							<video offset="0s" ref="r3" duration="17852400/90000s" />
+						</clip>
+					</spine>
+				</sequence>
+			</project>
+		</event>
+		<smart-collection name="Projects" match="all">
+			<match-clip rule="is" type="project" />
+		</smart-collection>
+		<smart-collection name="All Video" match="any">
+			<match-media rule="is" type="videoOnly" />
+			<match-media rule="is" type="videoWithAudio" />
+		</smart-collection>
+		<smart-collection name="Audio Only" match="all">
+			<match-media rule="is" type="audioOnly" />
+		</smart-collection>
+		<smart-collection name="Stills" match="all">
+			<match-media rule="is" type="stills" />
+		</smart-collection>
+		<smart-collection name="Favorites" match="all">
+			<match-ratings value="favorites" />
+		</smart-collection>
+	</library>
+</fcpxml>
