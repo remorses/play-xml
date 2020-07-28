@@ -2,39 +2,42 @@
 <fcpxml version="1.8">
   <resources>
     <format id="r1" name="FFVideoFormat720p60" frameDuration="100/6000s" width="1280" height="720" colorSpace="1-1-1 (Rec. 709)"/>
-    <format id="r6a" name="FFVideoFormat1080p25"/>
-    <asset id="vid" src="./video.mp4" start="0s" duration="5s" hasVideo="1" hasAudio="0" format="r6a" audioSources="1" audioChannels="2" audioRate="44100"/>
-    <format id="rad" name="FFVideoFormat1080p25"/>
-    <asset id="aud" src="./audio.wav" start="0s" duration="5s" hasVideo="1" hasAudio="0" format="rad" audioSources="1" audioChannels="2" audioRate="44100"/>
+    <format id="r9022b6f0-036d-4582-8fbb-a4bb0fa237e9" name="FFVideoFormat1080p25"/>
+    <asset id="rdmlkZW8ubXA0" src="./video.mp4" start="0s" duration="5s" hasVideo="1" hasAudio="0" format="r9022b6f0-036d-4582-8fbb-a4bb0fa237e9" audioSources="1" audioChannels="2" audioRate="44100"/>
+    <format id="rd30c666f-fa5c-4442-b9dc-07cc6fa6bb45" name="FFVideoFormat1080p25"/>
+    <asset id="rYXVkaW8ud2F2" src="./audio.wav" start="0s" duration="5s" hasVideo="1" hasAudio="0" format="rd30c666f-fa5c-4442-b9dc-07cc6fa6bb45" audioSources="1" audioChannels="2" audioRate="44100"/>
     <effect id="trans" name="Gaussian" uid=".../Transitions.localized/Blurs.localized/Gaussian.localized/Gaussian.motr"/>
   </resources>
   <event name="Demo Title of project">
     <project name="Demo Title of project">
       <sequence format="r1" duration="10s">
         <spine>
-          <asset-clip tcFormat="NDF" name="Untitled" ref="vid" duration="1s" audioRole="dialogue">
+          <asset-clip tcFormat="NDF" name="Untitled" duration="1s" audioRole="dialogue" ref="rdmlkZW8ubXA0">
             <adjust-volume amount="-96dB"/>
           </asset-clip>
-          <asset-clip tcFormat="NDF" name="Untitled" ref="vid" duration="1s" offset="2s" audioRole="dialogue">
+          <asset-clip tcFormat="NDF" name="Untitled" duration="1s" offset="2s" audioRole="dialogue" ref="rdmlkZW8ubXA0">
             <adjust-volume amount="-96dB"/>
-            <asset-clip tcFormat="NDF" name="Untitled" ref="vid" duration="1s" offset="2s" audioRole="dialogue" lane="-1"/>
-            <asset-clip tcFormat="NDF" name="Untitled" ref="vid" duration="1s" audioRole="dialogue" lane="-2"/>
+            <asset-clip tcFormat="NDF" name="Untitled" duration="1s" offset="2s" audioRole="dialogue" lane="-1" ref="rdmlkZW8ubXA0"/>
+            <asset-clip tcFormat="NDF" name="Untitled" duration="1s" audioRole="dialogue" lane="-2" ref="rdmlkZW8ubXA0"/>
             <spine lane="-3">
-              <asset-clip tcFormat="NDF" name="Untitled" ref="aud" duration="30000/120000s" audioRole="dialogue"/>
-              <asset-clip tcFormat="NDF" name="Untitled" ref="aud" duration="30000/120000s" audioRole="dialogue"/>
-              <asset-clip tcFormat="NDF" name="Untitled" ref="aud" duration="30000/120000s" audioRole="dialogue"/>
-              <asset-clip tcFormat="NDF" name="Untitled" ref="aud" duration="30000/120000s" audioRole="dialogue"/>
-              <asset-clip tcFormat="NDF" name="Untitled" ref="aud" duration="30000/120000s" audioRole="dialogue"/>
-              <asset-clip tcFormat="NDF" name="Untitled" ref="aud" duration="30000/120000s" audioRole="dialogue"/>
-              <asset-clip tcFormat="NDF" name="Untitled" ref="aud" duration="30000/120000s" audioRole="dialogue"/>
+              <asset-clip tcFormat="NDF" name="Untitled" duration="7500/120000s" audioRole="dialogue" ref="rYXVkaW8ud2F2"/>
+              <asset-clip tcFormat="NDF" name="Untitled" duration="7500/120000s" audioRole="dialogue" ref="rYXVkaW8ud2F2"/>
+              <asset-clip tcFormat="NDF" name="Untitled" duration="7500/120000s" audioRole="dialogue" ref="rYXVkaW8ud2F2"/>
+              <asset-clip tcFormat="NDF" name="Untitled" duration="7500/120000s" audioRole="dialogue" ref="rYXVkaW8ud2F2"/>
+              <asset-clip tcFormat="NDF" name="Untitled" duration="7500/120000s" audioRole="dialogue" ref="rYXVkaW8ud2F2"/>
+              <asset-clip tcFormat="NDF" name="Untitled" duration="7500/120000s" audioRole="dialogue" ref="rYXVkaW8ud2F2"/>
+              <asset-clip tcFormat="NDF" name="Untitled" duration="7500/120000s" audioRole="dialogue" ref="rYXVkaW8ud2F2"/>
+              <asset-clip tcFormat="NDF" name="Untitled" duration="7500/120000s" audioRole="dialogue" ref="rYXVkaW8ud2F2"/>
+              <asset-clip tcFormat="NDF" name="Untitled" duration="7500/120000s" audioRole="dialogue" ref="rYXVkaW8ud2F2"/>
+              <asset-clip tcFormat="NDF" name="Untitled" duration="7500/120000s" audioRole="dialogue" ref="rYXVkaW8ud2F2"/>
             </spine>
           </asset-clip>
-          <asset-clip tcFormat="NDF" name="Untitled" ref="vid" duration="1s" audioRole="dialogue"/>
+          <asset-clip tcFormat="NDF" name="Untitled" duration="1s" audioRole="dialogue" ref="rdmlkZW8ubXA0"/>
           <transition name="Transition" duration="15000/30000s">
             <filter-video ref="trans" name="Gaussian"/>
           </transition>
-          <asset-clip tcFormat="NDF" name="Untitled" ref="vid" duration="1s" audioRole="dialogue"/>
-          <asset-clip tcFormat="NDF" name="Untitled" ref="vid" duration="1s" audioRole="dialogue"/>
+          <asset-clip tcFormat="NDF" name="Untitled" duration="1s" audioRole="dialogue" ref="rdmlkZW8ubXA0"/>
+          <asset-clip tcFormat="NDF" name="Untitled" duration="1s" audioRole="dialogue" ref="rdmlkZW8ubXA0"/>
         </spine>
       </sequence>
     </project>

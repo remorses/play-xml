@@ -5,10 +5,9 @@ import { Asset, Clip, SimpleTransition } from './clip'
 import { Beats } from './time'
 
 const Example = ({}) => {
-    const VIDEO_ID = 'vid'
-    const AUDIO_ID = 'aud'
+    const VIDEO_PATH = './video.mp4'
+    const AUDIO_PATH = './audio.wav'
     const TRANSITION_REF = 'trans'
-    // TODO remove resources, instead you can pass a path to every clip
     // TODO make a library of transition you can use as component
     return (
         <fcpxml version='1.8'>
@@ -21,8 +20,8 @@ const Example = ({}) => {
                     height='720'
                     colorSpace='1-1-1 (Rec. 709)'
                 />
-                <Asset id={VIDEO_ID} src='./video.mp4' start={0} duration={5} />
-                <Asset id={AUDIO_ID} src='./audio.wav' start={0} duration={5} />
+                <Asset src={VIDEO_PATH} start={0} duration={5} />
+                <Asset src={AUDIO_PATH} start={0} duration={5} />
                 <effect
                     id={TRANSITION_REF}
                     name='Gaussian'
@@ -35,50 +34,39 @@ const Example = ({}) => {
                 <project name='Demo Title of project'>
                     <sequence format='r1' duration='10s'>
                         <spine>
-                            <Clip mute ref={VIDEO_ID} duration={1} />
-                            <Clip mute offset={2} ref={VIDEO_ID} duration={1}>
+                            <Clip mute path={VIDEO_PATH} duration={1} />
+                            <Clip
+                                mute
+                                offset={2}
+                                path={VIDEO_PATH}
+                                duration={1}
+                            >
                                 <Clip
                                     offset={2}
                                     lane='-1'
-                                    ref={VIDEO_ID}
+                                    path={VIDEO_PATH}
                                     duration={1}
                                 />
-                                <Clip lane='-2' ref={VIDEO_ID} duration={1} />
+                                <Clip
+                                    lane='-2'
+                                    path={VIDEO_PATH}
+                                    duration={1}
+                                />
                                 <spine lane='-3'>
-                                    <Clip
-                                        ref={AUDIO_ID}
-                                        duration={Beats(1 / 2)}
-                                    />
-                                    <Clip
-                                        ref={AUDIO_ID}
-                                        duration={Beats(1 / 2)}
-                                    />
-                                    <Clip
-                                        ref={AUDIO_ID}
-                                        duration={Beats(1 / 2)}
-                                    />
-                                    <Clip
-                                        ref={AUDIO_ID}
-                                        duration={Beats(1 / 2)}
-                                    />
-                                    <Clip
-                                        ref={AUDIO_ID}
-                                        duration={Beats(1 / 2)}
-                                    />
-                                    <Clip
-                                        ref={AUDIO_ID}
-                                        duration={Beats(1 / 2)}
-                                    />
-                                    <Clip
-                                        ref={AUDIO_ID}
-                                        duration={Beats(1 / 2)}
-                                    />
+                                    {Array(10)
+                                        .fill(0)
+                                        .map((_) => (
+                                            <Clip
+                                                path={AUDIO_PATH}
+                                                duration={Beats(1 / 8)}
+                                            />
+                                        ))}
                                 </spine>
                             </Clip>
-                            <Clip ref={VIDEO_ID} duration={1} />
+                            <Clip path={VIDEO_PATH} duration={1} />
                             <SimpleTransition videoRef={TRANSITION_REF} />
-                            <Clip ref={VIDEO_ID} duration={1} />
-                            <Clip ref={VIDEO_ID} duration={1} />
+                            <Clip path={VIDEO_PATH} duration={1} />
+                            <Clip path={VIDEO_PATH} duration={1} />
                         </spine>
                     </sequence>
                 </project>

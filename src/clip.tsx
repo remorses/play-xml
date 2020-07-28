@@ -1,7 +1,7 @@
 import { Fragment, JSXXML } from 'jsx-xml'
 import { omitBy, isUndefined } from 'lodash'
 import * as uuid from 'uuid'
-import { formatBoolean } from './support'
+import { formatBoolean, pathToRef } from './support'
 import { formatDuration } from './time'
 
 /*
@@ -14,10 +14,10 @@ to use end on a clip you must specify end to the asset
 */
 export const Clip = ({
     name = 'Untitled',
+    path,
     start = undefined,
     duration,
     offset = undefined,
-    ref,
     audioRole = 'dialogue',
     format,
     mute = false,
@@ -27,7 +27,6 @@ export const Clip = ({
     const props: any = omitBy(
         {
             name,
-            ref,
             start: formatDuration(start),
             duration: formatDuration(duration),
             offset: formatDuration(offset),
@@ -38,7 +37,7 @@ export const Clip = ({
     )
 
     return (
-        <asset-clip tcFormat='NDF' {...props} {...rest}>
+        <asset-clip tcFormat='NDF' {...props} {...rest} ref={pathToRef(path)}>
             {mute && <adjust-volume amount='-96dB' />}
             {children}
             {/* <filter-video ref='r5' name='Color Correction'>
@@ -81,7 +80,6 @@ export const SimpleTransition = ({
 }
 
 export const Asset = ({
-    id,
     src,
     start,
     duration,
@@ -95,13 +93,13 @@ export const Asset = ({
     fps = 25,
 }) => {
     // TODO try using an audio asset
-    const formatId = 'r' + uuid.v4().replace(/-/g, '').slice(0, 2)
+    const formatId = 'r' + uuid.v4() // TODO encode path here
     // TODO make one format common for all the clips with same format (width, height, fpz, definition)
     return (
         <Fragment>
             <format id={formatId} name={formatName + fps} />
             <asset
-                id={id}
+                id={pathToRef(src)}
                 src={src}
                 start={`${start}s`}
                 duration={`${duration}s`}
