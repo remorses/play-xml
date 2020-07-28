@@ -1,7 +1,8 @@
 import { Fragment, JSXXML } from 'jsx-xml'
 import { omitBy, isUndefined } from 'lodash'
 import * as uuid from 'uuid'
-import { formatDuration, formatBoolean } from './support'
+import { formatBoolean } from './support'
+import { formatDuration } from './time'
 
 /*
 start and end are applied to the asset video, specifying the region of the source video
@@ -41,8 +42,6 @@ export const Clip = ({
         </asset-clip>
     )
 }
-
-
 
 export const Asset = ({
     id,
