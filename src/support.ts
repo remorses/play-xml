@@ -1,11 +1,11 @@
-import path from 'path'
-import os from 'os'
-import * as uuid from 'uuid'
+import ffmpeg, { FfprobeData } from 'fluent-ffmpeg'
+import fs, { promises as fsp } from 'fs'
+import { isUndefined } from 'lodash'
 import mime from 'mime-types'
 import fetch from 'node-fetch'
-import fs from 'fs'
-import { promises as fsp } from 'fs'
-import { isUndefined } from 'lodash'
+import os from 'os'
+import path from 'path'
+import * as uuid from 'uuid'
 
 export function formatBoolean(bool) {
     return bool ? '1' : '0'
@@ -44,6 +44,17 @@ export async function downloadFile({
                 },
                 path: newPath,
             })
+        })
+    })
+}
+
+export function getVideoInfo(p): Promise<FfprobeData> {
+    return new Promise((resolve, reject) => {
+        ffmpeg.ffprobe(p, function (err, metadata) {
+            if (err) {
+                reject(err)
+            }
+            resolve(metadata)
         })
     })
 }
