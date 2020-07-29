@@ -15,8 +15,10 @@ describe('support', () => {
         console.log(res)
     })
     it('getVideoFormat', async () => {
-        const res = await getVideoFormat('./video.mp4')
+        var res = await getVideoFormat('./video.mp4')
         console.log(res)
+        const e = await getVideoFormat('./audio.wav').catch((e) => e)
+        assert(e instanceof Error)
     })
     // {
     //     streams: [
