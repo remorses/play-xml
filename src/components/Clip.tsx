@@ -17,7 +17,7 @@ export const Clip = ({
     start = undefined,
     duration,
     offset = undefined,
-    audioRole = 'dialogue',
+    audioRole,
     format,
     mute = false,
     children = null,
@@ -26,6 +26,7 @@ export const Clip = ({
     const props: any = omitBy(
         {
             name,
+            ref: pathToRef(src),
             start: formatDuration(start),
             duration: formatDuration(duration),
             offset: formatDuration(offset),
@@ -34,9 +35,9 @@ export const Clip = ({
         },
         isUndefined,
     )
-
+    const C = props.ref ? 'asset-clip' : 'clip'
     return (
-        <asset-clip tcFormat='NDF' {...props} {...rest} ref={pathToRef(src)}>
+        <C tcFormat='NDF' {...props} {...rest}>
             {mute && <adjust-volume amount='-96dB' />}
             {children}
             {/* <filter-video ref='r5' name='Color Correction'>
@@ -49,6 +50,6 @@ export const Clip = ({
                 <param name='Saturation Midtones' key='2006' value='1' />
                 <param name='Saturation Shadows' key='2007' value='1' />
             </filter-video> */}
-        </asset-clip>
+        </C>
     )
 }

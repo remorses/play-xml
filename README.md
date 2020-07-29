@@ -76,3 +76,21 @@ In Final Cut Pro you have to specify an anchor to create parallel clips
     </spine>
 </Anchored>
 ```
+
+If you don't care about the main anchor you can use an empty clip with a small duration
+
+```jsx
+<Anchored anchor={<Clip duration={0.1} />}>
+    {/*the following are parallel to the anchor*/}
+    <spine lane='-1'>
+        <Clip mute src={VIDEO_PATH} duration={3} />
+        <Clip mute src={VIDEO_PATH} duration={3} />
+        <Clip mute src={VIDEO_PATH} duration={3} />
+    </spine>
+    <spine lane='-2'>
+        <Clip mute src={VIDEO_PATH} duration={3} />
+        <Clip mute src={VIDEO_PATH} duration={3} />
+        <Clip mute src={VIDEO_PATH} duration={3} />
+    </spine>
+</Anchored>
+```

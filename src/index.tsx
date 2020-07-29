@@ -67,18 +67,83 @@ const Example = ({}) => {
                         <spine lane='0'>
                             <Anchored
                                 anchor={
-                                    <Clip mute src={VIDEO_PATH} duration={2} />
+                                    <Clip mute src={VIDEO_PATH} duration={4} />
                                 }
                             >
                                 <spine lane='-1'>
-                                    <Clip mute src={VIDEO_PATH} duration={3} />
-                                    <Clip mute src={VIDEO_PATH} duration={3} />
-                                    <Clip mute src={VIDEO_PATH} duration={3} />
+                                    <Clip
+                                        mute
+                                        src={VIDEO_PATH}
+                                        duration={0.3}
+                                    />
+                                    <Clip
+                                        mute
+                                        src={VIDEO_PATH}
+                                        duration={0.3}
+                                    />
+                                    <Clip
+                                        mute
+                                        src={VIDEO_PATH}
+                                        duration={0.3}
+                                    />
                                 </spine>
                                 <spine lane='-2'>
+                                    <Clip
+                                        mute
+                                        src={VIDEO_PATH}
+                                        duration={0.3}
+                                    />
+                                    <Clip
+                                        mute
+                                        src={VIDEO_PATH}
+                                        duration={0.3}
+                                    />
+                                    <Clip
+                                        mute
+                                        src={VIDEO_PATH}
+                                        duration={0.3}
+                                    />
+                                </spine>
+                            </Anchored>
+                            <Anchored
+                                anchor={
                                     <Clip mute src={VIDEO_PATH} duration={3} />
-                                    <Clip mute src={VIDEO_PATH} duration={3} />
-                                    <Clip mute src={VIDEO_PATH} duration={3} />
+                                }
+                            >
+                                <spine lane='-1'>
+                                    <Clip
+                                        mute
+                                        src={VIDEO_PATH}
+                                        duration={0.3}
+                                    />
+                                    <Clip
+                                        mute
+                                        src={VIDEO_PATH}
+                                        duration={0.3}
+                                    />
+                                    <Clip
+                                        mute
+                                        src={VIDEO_PATH}
+                                        duration={0.3}
+                                    />
+                                </spine>
+                                <spine lane='-2'>
+                                    <Clip
+                                        mute
+                                        src={VIDEO_PATH}
+                                        duration={0.3}
+                                    />
+
+                                    <Clip
+                                        mute
+                                        src={VIDEO_PATH}
+                                        duration={0.3}
+                                    />
+                                    <Clip
+                                        mute
+                                        src={VIDEO_PATH}
+                                        duration={0.3}
+                                    />
                                 </spine>
                             </Anchored>
                             {/* <Clip mute lane='-1' src={VIDEO_PATH} /> */}
