@@ -54,3 +54,25 @@ To start come clips with same offset as another clip A, put the clips as childre
     </spine>
 </Clip>
 ```
+
+## Parallel clips (anchored)
+
+The anchor is the main clip, other parallel clips are anchored to it, when you move the anchor you also move all the other parallel clips
+
+In Final Cut Pro you have to specify an anchor to create parallel clips
+
+```jsx
+<Anchored anchor={<Clip mute src={VIDEO_PATH} duration={2} />}>
+    {/*the following are parallel to the anchor*/}
+    <spine lane='-1'>
+        <Clip mute src={VIDEO_PATH} duration={3} />
+        <Clip mute src={VIDEO_PATH} duration={3} />
+        <Clip mute src={VIDEO_PATH} duration={3} />
+    </spine>
+    <spine lane='-2'>
+        <Clip mute src={VIDEO_PATH} duration={3} />
+        <Clip mute src={VIDEO_PATH} duration={3} />
+        <Clip mute src={VIDEO_PATH} duration={3} />
+    </spine>
+</Anchored>
+```

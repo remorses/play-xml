@@ -70,6 +70,11 @@ const Example = ({}) => {
                                     <Clip mute src={VIDEO_PATH} duration={2} />
                                 }
                             >
+                                <spine lane='-1'>
+                                    <Clip mute src={VIDEO_PATH} duration={3} />
+                                    <Clip mute src={VIDEO_PATH} duration={3} />
+                                    <Clip mute src={VIDEO_PATH} duration={3} />
+                                </spine>
                                 <spine lane='-2'>
                                     <Clip mute src={VIDEO_PATH} duration={3} />
                                     <Clip mute src={VIDEO_PATH} duration={3} />
