@@ -1,21 +1,38 @@
 import fs from 'fs'
-import { render, JSXXML, JSXNode } from 'jsx-xml'
+import { render, JSXXML, JSXNode, JsxElement } from 'jsx-xml'
 import { Wrapper } from './project'
+import { mapKeys } from 'lodash'
 import { Asset, Clip, SimpleTransition } from './components'
-import { Beats } from './time'
+import { Beats, formatDuration } from './time'
 
 // TODO make a Parallel element that makes some clips parallel (making the first clip the parent and other clips children)
 // TODO make Spine sequence that makes clips sequential
 
-export const Parallel = ({ children }) => {
-    if (!children || children.length == 0) {
-        return null
+export const Anchored = ({ anchor, children }): JsxElement => {
+    // if (!children || children.length == 0) {
+    //     return null
+    // }
+    // const FirstClip = children[0]
+    // if (FirstClip.type.isClip) {
+    //     return JSXXML(FirstClip.type, FirstClip.props, children.slice(1))
+    // }
+    return cloneElement(anchor, {}, children)
+}
+
+function cloneElement(element, props = {}, children = []): JsxElement {
+    const ks = Object.keys(element)
+    if (!ks.length) {
+        throw new Error(`element ${element} invalid, no keys`)
     }
-    const FirstClip = children[0]
-    if (FirstClip.type.isClip) {
-        return JSXXML(FirstClip.type, FirstClip.props, children.slice(1))
+    const tag = ks[0]
+    const oldProps = element[tag][0] || {}
+    return {
+        [tag]: [
+            { ...oldProps, ...props },
+            ...element[tag]?.slice?.(1),
+            ...children,
+        ],
     }
-    return <clip duration=''></clip>
 }
 
 const Example = ({}) => {
@@ -48,19 +65,17 @@ const Example = ({}) => {
                 <project name='Demo Title of project'>
                     <sequence format='r1' duration='10s'>
                         <spine lane='0'>
-                            <Clip mute lane='0' src={VIDEO_PATH} duration={1}>
-                                <Clip
-                                    mute
-                                    lane='-1'
-                                    src={VIDEO_PATH}
-                                    duration={2}
-                                />
+                            <Anchored
+                                anchor={
+                                    <Clip mute src={VIDEO_PATH} duration={2} />
+                                }
+                            >
                                 <spine lane='-2'>
                                     <Clip mute src={VIDEO_PATH} duration={3} />
                                     <Clip mute src={VIDEO_PATH} duration={3} />
                                     <Clip mute src={VIDEO_PATH} duration={3} />
                                 </spine>
-                            </Clip>
+                            </Anchored>
                             {/* <Clip mute lane='-1' src={VIDEO_PATH} /> */}
                         </spine>
                     </sequence>
