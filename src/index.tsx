@@ -45,11 +45,11 @@ const Example = ({}) => {
             <resources>
                 <format
                     id='r1'
-                    name='FFVideoFormat720p60'
+                    name='FFVideoFormat720p24'
                     frameDuration='100/6000s'
                     width='1280'
                     height='720'
-                    colorSpace='1-1-1 (Rec. 709)'
+                    // colorSpace='1-1-1 (Rec. 709)'
                 />
                 <Asset src={VIDEO_PATH} start={0} duration={5} />
                 <Asset src={AUDIO_PATH} start={0} duration={5} />

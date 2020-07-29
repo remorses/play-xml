@@ -1,5 +1,5 @@
 import assert from 'assert'
-import { downloadFile, getVideoInfo } from '../src/support'
+import { downloadFile, getVideoInfo, getVideoFormat } from '../src/support'
 
 describe('support', () => {
     it('downloadFile', async () => {
@@ -12,6 +12,10 @@ describe('support', () => {
     })
     it('getVideoInfo', async () => {
         const res = await getVideoInfo('./video.mp4')
+        console.log(res)
+    })
+    it('getVideoFormat', async () => {
+        const res = await getVideoFormat('./video.mp4')
         console.log(res)
     })
     // {

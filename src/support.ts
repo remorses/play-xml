@@ -1,11 +1,13 @@
-import ffmpeg, { FfprobeData } from 'fluent-ffmpeg'
+import ffmpeg, { FfprobeData, FfprobeStream } from 'fluent-ffmpeg'
 import fs, { promises as fsp } from 'fs'
 import { isUndefined } from 'lodash'
 import mime from 'mime-types'
 import fetch from 'node-fetch'
+import { sortBy } from 'lodash'
 import os from 'os'
 import path from 'path'
 import * as uuid from 'uuid'
+import { formatNames } from './constants'
 
 export function formatBoolean(bool) {
     return bool ? '1' : '0'
@@ -57,4 +59,54 @@ export function getVideoInfo(p): Promise<FfprobeData> {
             resolve(metadata)
         })
     })
+}
+
+function computeFraction(s: string) {
+    if (!s) {
+        throw new Error('cannot compute fraction of falsey value ' + s)
+    }
+    if (!s.includes('/')) {
+        return Number(s)
+    }
+    const [a, b] = s.split('/')
+    return Number(a) / Number(b)
+}
+
+export async function getVideoFormat(p) {
+    const info = await getVideoInfo(p)
+    const videoStream = info.streams
+        .filter((x) => x.codec_type === 'video')
+        .sort((a, b) => b.width - a.width)[0]
+    if (!videoStream) {
+        // TODO maybe throw
+        throw new Error(`cannot find video stream for '${p}'`)
+    }
+    const { width, height, avg_frame_rate, color_space } = videoStream
+    const name = computeFormatName(videoStream)
+    if (!formatNames.includes(name)) {
+        throw new Error(`computed format name ${name} does not exist`)
+    }
+    const format = {
+        width,
+        height,
+        name,
+        frameDuration: avg_frame_rate + 's',
+        // colorSpace: '1-1-1 (Rec. 709)',
+    }
+    return format
+}
+
+const PRECISION = 0.1
+
+function computeFormatName(videoStream: FfprobeStream): string {
+    const { width, height, avg_frame_rate, color_space } = videoStream
+    const floatingFps = computeFraction(avg_frame_rate)
+    const fps = sortBy([24, 25, 30, 50, 60], (x) => {
+        return Math.abs(x - floatingFps)
+    })[0]
+    if (Math.abs(width / height - 16 / 9) <= PRECISION) {
+        return `FFVideoFormat${height}p${fps}`
+    } else {
+        return `FFVideoFormat${width}x${height}p${fps}`
+    }
 }
