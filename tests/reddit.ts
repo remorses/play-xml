@@ -18,6 +18,10 @@ describe('reddit', () => {
         const r = await redditConn
             .getSubreddit('Warzone')
             .getTop({ limit: 10, time: 'day' })
+
         assert(r[0].media.reddit_video.hls_url.startsWith('http'))
+        assert.equal(r.length, 10)
+        const data = await r.fetchMore({ amount: 10, append: false })
+        assert.equal(data.length, 10)
     })
 })
