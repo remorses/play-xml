@@ -13,7 +13,7 @@
             "dotenv/config",
             "ts-node/register"
         ],
-        "spec": "tests/**.ts",
+        "spec": "tests/**",
         "timeout": 9999999999
     },
     "repository": {
@@ -45,8 +45,10 @@
         "fluent-ffmpeg": "^2.1.2",
         "jsx-xml": "^0.2.3",
         "lodash": "^4.17.19",
+        "m3u8stream": "^0.7.1",
         "mime-types": "^2.1.27",
         "node-fetch": "^2.6.0",
+        "node-hls-downloader": "^1.2.0",
         "snoowrap": "^1.21.0",
         "ts-node": "^8.10.2",
         "uuid": "^8.3.0"

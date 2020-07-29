@@ -1,4 +1,5 @@
 import { render, JSXXML } from 'jsx-xml'
+import { defaultTo } from 'lodash'
 
 export const Project = ({
     eventName = 'Untitled Event',
@@ -19,6 +20,7 @@ export const Project = ({
                     // colorSpace='1-1-1 (Rec. 709)'
                 />
                 {assets}
+                {/* TODO add default transitions assets */}
             </resources>
 
             <event name={eventName}>

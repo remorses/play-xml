@@ -1,37 +1,33 @@
-import fs from 'fs'
+import { projectFromUrls } from '../src/projects/ProjectFromClips'
 import { JsxElement, JSXXML, render } from 'jsx-xml'
-import { Asset, Clip } from './components'
+import { Asset, Clip, Project, Anchored } from '../src'
+import fs from 'fs'
 
+describe('main', () => {
+    it('main', async function () {
+        const urls = [
+            {
+                url:
+                    'https://v.redd.it/uag4uw003od51/HLSPlaylist.m3u8?a=1598623389%2CNDBjOGQ3ZjNiYWM1YmI0MDAyOGM5ZjI0OTlkMzc4YzI0MGRhYzAzMTA4OTcwNGY0Mzc0NzlmNDIxOGM2YzQ3OQ%3D%3D&v=1&f=sd',
+                title: 'TacticalGramma Self-Revive WIN',
+            },
+        ]
+        const x = await projectFromUrls({
+            urls: urls.map((x) => x.url).slice(0, 2),
+        })
+        const xml = render(x, {
+            doctype: 'fcpxml',
+            createOptions: {
+                // headless: true,
+                encoding: 'UTF-8',
+            },
+            endOptions: { pretty: true },
+        }) // jsx input
 
-// TODO make a Parallel element that makes some clips parallel (making the first clip the parent and other clips children)
-// TODO make Spine sequence that makes clips sequential
-
-export const Anchored = ({ anchor, children }): JsxElement => {
-    // if (!children || children.length == 0) {
-    //     return null
-    // }
-    // const FirstClip = children[0]
-    // if (FirstClip.type.isClip) {
-    //     return JSXXML(FirstClip.type, FirstClip.props, children.slice(1))
-    // }
-    return cloneElement(anchor, {}, children)
-}
-
-export function cloneElement(element, props = {}, children = []): JsxElement {
-    const ks = Object.keys(element)
-    if (!ks.length) {
-        throw new Error(`element ${element} invalid, no keys`)
-    }
-    const tag = ks[0]
-    const oldProps = element[tag][0] || {}
-    return {
-        [tag]: [
-            { ...oldProps, ...props },
-            ...element[tag]?.slice?.(1),
-            ...children,
-        ],
-    }
-}
+        console.log(xml)
+        fs.writeFileSync('out.fcpxml', xml)
+    })
+})
 
 const Example = ({}) => {
     const VIDEO_PATH = './video.mp4'
@@ -153,14 +149,56 @@ const Example = ({}) => {
     )
 }
 
-const xml = render(<Example />, {
-    doctype: 'fcpxml',
-    createOptions: {
-        // headless: true,
-        encoding: 'UTF-8',
-    },
-    endOptions: { pretty: true },
-}) // jsx input
+async function main() {
+    const urls = [
+        {
+            url:
+                'https://v.redd.it/eiz5o61jdmd51/HLSPlaylist.m3u8?a=1598623389%2CMjI1N2ZiYWFkMDA2Y2VkZWMyZWRkMzYzNjZjZTA1YTUxYjkyZGY3ZmY4Y2E1YmJlMGI0MTY0OTM0YmQwODQwNQ%3D%3D&v=1&f=sd',
+            title: '3 Helis 1 Rpg.',
+        },
+        {
+            url:
+                'https://v.redd.it/ki3ivtmc0md51/HLSPlaylist.m3u8?a=1598623389%2CMTgwY2YyYjljODc1MzY0NWU4OTlmZGJhY2MyZWFjYzBhZTI0ZDBjNGZkYjgxMDQyNzIxMzk2YWI1ZTIzMGZkOQ%3D%3D&v=1&f=sd',
+            title: 'By the time i realised, it was too late...',
+        },
+        {
+            url:
+                'https://v.redd.it/6nw4e0setpd51/HLSPlaylist.m3u8?a=1598623389%2CNDY5NTAwOWRmYTZmOTIxZjk3NGJkZWRiNTNhYzQ5NzA2NWUwZGRjZThiYjhjNWI5OWU3YjViMmM5NWUyOWNhYQ%3D%3D&v=1&f=sd',
+            title: '5 bullets, 1 semtex, 100% accuracy and a Juggernaut',
+        },
+        {
+            url:
+                'https://v.redd.it/2a0i5uzotmd51/HLSPlaylist.m3u8?a=1598623389%2CZmFiMmQ2Mzc0ZWY3MzYyZmFjYzlhMmE5NTM0ZGJkMzk3NGJiOGM2ZTkxNDg3ZmMxNzdiZWFiZjcwNjg3NDY4YQ%3D%3D&v=1&f=sd',
+            title: 'A short lived friendship in solos',
+        },
+        {
+            url:
+                'https://v.redd.it/0t659bsftmd51/HLSPlaylist.m3u8?a=1598623389%2CZjc1ODI2ZThjMGRiMzk3NzI2NmFmNjc4ZWQzZjU3ZGUxM2EwNThmODJjNDI5OWM0YjZkNDY2MzNiZmI4NDJlOA%3D%3D&v=1&f=sd',
+            title: 'A pretty long pistol snipe out of a helicopter',
+        },
+        {
+            url:
+                'https://v.redd.it/09i1lc4jzld51/HLSPlaylist.m3u8?a=1598623389%2CZWIyNDk5MTUxMzk1MWRjNzYzYmQ1MDQ4Mzk4ZWZlYmU5YWNmZWI5NWEyMDFjZmZlNWNiZmU1N2E3ZTMwMTU5NQ%3D%3D&v=1&f=sd',
+            title: 'The perfect mine',
+        },
+        {
+            url:
+                'https://v.redd.it/uag4uw003od51/HLSPlaylist.m3u8?a=1598623389%2CNDBjOGQ3ZjNiYWM1YmI0MDAyOGM5ZjI0OTlkMzc4YzI0MGRhYzAzMTA4OTcwNGY0Mzc0NzlmNDIxOGM2YzQ3OQ%3D%3D&v=1&f=sd',
+            title: 'TacticalGramma Self-Revive WIN',
+        },
+    ]
+    const x = await projectFromUrls({
+        urls: urls.map((x) => x.url).slice(0, 2),
+    })
+    const xml = render(x, {
+        doctype: 'fcpxml',
+        createOptions: {
+            // headless: true,
+            encoding: 'UTF-8',
+        },
+        endOptions: { pretty: true },
+    }) // jsx input
 
-console.log(xml)
-fs.writeFileSync('out.fcpxml', xml)
+    console.log(xml)
+    fs.writeFileSync('out.fcpxml', xml)
+}

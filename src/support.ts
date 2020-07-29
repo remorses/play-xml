@@ -1,3 +1,5 @@
+import m3u8stream from 'm3u8stream'
+
 import ffmpeg, { FfprobeData, FfprobeStream } from 'fluent-ffmpeg'
 import fs, { promises as fsp } from 'fs'
 import { isUndefined } from 'lodash'
@@ -8,6 +10,7 @@ import os from 'os'
 import path from 'path'
 import * as uuid from 'uuid'
 import { formatNames } from './constants'
+import { JsxElement } from 'jsx-xml'
 
 export function formatBoolean(bool) {
     return bool ? '1' : '0'
@@ -21,10 +24,49 @@ export function pathToRef(p: string) {
     return 'r' + Buffer.from(path.normalize(p)).toString('hex')
 }
 
+export function downloadM3u8({
+    url,
+    directory = '',
+    silent = false,
+    ...rest
+}): Promise<{ filePath: string; unlink: () => void }> {
+    const res = m3u8stream(url, { ...rest })
+    directory = directory || os.tmpdir()
+    const filePath = path.resolve(directory, uuid.v4() + '.m3u8')
+    console.log(`downloading to ${filePath}`)
+    return new Promise((resolve, reject) => {
+        const fileStream = fs.createWriteStream(filePath)
+        res.pipe(fileStream)
+        res.on('error', (err) => {
+            reject(err)
+        })
+        res.on('progress', (x) => {
+            if (!silent) {
+                console.log(`duration ${x.duration}, size ${x.size}`)
+            }
+        })
+        res.on('end', () => {
+            if (!silent) {
+                console.log(`end`)
+            }
+        })
+        fileStream.on('finish', function () {
+            resolve({
+                // extension,
+                unlink: () => {
+                    return fsp.unlink(filePath)
+                },
+                filePath: filePath,
+            })
+        })
+    })
+}
+
 export async function downloadFile({
     url,
     directory = '',
-}): Promise<{ extension: string; path: string; delete: () => void }> {
+    isHsl = false,
+}): Promise<{ filePath: string; unlink: () => void }> {
     const res = await fetch(url)
     directory = directory || os.tmpdir()
     const filePath = path.resolve(directory, uuid.v4())
@@ -34,17 +76,18 @@ export async function downloadFile({
         res.body.on('error', (err) => {
             reject(err)
         })
+
         fileStream.on('finish', function () {
             const extension =
                 mime.extension(res.headers.get('Content-Type')) || 'unknown'
             const newPath = `${filePath}.${extension}`
             fs.renameSync(filePath, newPath)
             resolve({
-                extension,
-                delete: () => {
+                // extension,
+                unlink: () => {
                     return fsp.unlink(newPath)
                 },
-                path: newPath,
+                filePath: newPath,
             })
         })
     })
@@ -109,4 +152,24 @@ function computeFormatName(videoStream: FfprobeStream): string {
     } else {
         return `FFVideoFormat${width}x${height}p${fps}`
     }
+}
+
+export function cloneElement(element, props = {}, children = []): JsxElement {
+    const ks = Object.keys(element)
+    if (!ks.length) {
+        throw new Error(`element ${element} invalid, no keys`)
+    }
+    const tag = ks[0]
+    const oldProps = element[tag][0] || {}
+    return {
+        [tag]: [
+            { ...oldProps, ...props },
+            ...element[tag]?.slice?.(1),
+            ...children,
+        ],
+    }
+}
+
+export const Anchored = ({ anchor, children }): JsxElement => {
+    return cloneElement(anchor, {}, children)
 }

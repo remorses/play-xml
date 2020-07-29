@@ -1,5 +1,10 @@
 import assert from 'assert'
-import { downloadFile, getVideoInfo, getVideoFormat } from '../src/support'
+import {
+    downloadFile,
+    getVideoInfo,
+    getVideoFormat,
+    downloadM3u8,
+} from '../src/support'
 
 describe('support', () => {
     it('downloadFile', async () => {
@@ -7,8 +12,17 @@ describe('support', () => {
             url: 'https://via.placeholder.com/150',
         })
         console.log(res)
-        assert(res.path)
-        await res.delete()
+        assert(res.filePath)
+        await res.unlink()
+    })
+    it('downloadM3u8', async () => {
+        const res = await downloadM3u8({
+            url: 'https://v.redd.it/uag4uw003od51/HLSPlaylist.m3u8',
+            parser: 'dash-mpd',
+        })
+        console.log(res)
+        assert(res.filePath)
+        await res.unlink()
     })
     it('getVideoInfo', async () => {
         const res = await getVideoInfo('./video.mp4')
