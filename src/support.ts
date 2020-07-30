@@ -17,6 +17,11 @@ export function formatBoolean(bool) {
     return bool ? '1' : '0'
 }
 
+export function pretty(x) {
+    console.log(JSON.stringify(x, null, 4))
+    return JSON.stringify(x, null, 4)
+}
+
 export function pathToRef(p: string) {
     if (isUndefined(p)) {
         return
@@ -185,9 +190,10 @@ export function cloneElement(element, props = {}, children = []): JsxElement {
     }
     const tag = ks[0]
     const oldProps = element[tag][0] || {}
+    const newProps = { ...oldProps, ...props }
     return {
         [tag]: [
-            { ...oldProps, ...props },
+            ...(Object.keys(newProps).length ? [newProps] : []),
             ...element[tag]?.slice?.(1),
             ...children,
         ],
