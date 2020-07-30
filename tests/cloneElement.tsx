@@ -21,6 +21,14 @@ describe('cloneElement', () => {
         var cloned = cloneElement(<tag />, props, [children])
         assert.equal(pretty(element), pretty(cloned))
     })
+    // TODO children is not handled like react does, children prop should be removed from the prop object and added to the array of element children
+    // it('adds children using children prop', () => {
+    //     const children = <anothertag prop='' />
+    //     const props = { x: 10, y: 4, children }
+    //     var element = <tag {...props} />
+    //     var cloned = cloneElement(<tag />, props)
+    //     assert.equal(pretty(element), pretty(cloned))
+    // })
     it('works with FC elements', () => {
         const B = ({ x, children }) => {
             return (
