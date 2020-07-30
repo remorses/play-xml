@@ -14,6 +14,13 @@ describe('cloneElement', () => {
         var cloned = cloneElement(<tag />, props)
         assert.equal(pretty(element), pretty(cloned))
     })
+    it('adds new props and children', () => {
+        const props = { x: 10, y: 4 }
+        const children = <anothertag prop='' />
+        var element = <tag {...props}>{children}</tag>
+        var cloned = cloneElement(<tag />, props, [children])
+        assert.equal(pretty(element), pretty(cloned))
+    })
     it('works with FC elements', () => {
         const B = ({ x, children }) => {
             return (
