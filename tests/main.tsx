@@ -6,14 +6,12 @@ import fs from 'fs'
 describe('main', () => {
     it('main', async function () {
         const urls = [
-            {
-                url:
-                    'https://v.redd.it/uag4uw003od51/HLSPlaylist.m3u8?a=1598623389%2CNDBjOGQ3ZjNiYWM1YmI0MDAyOGM5ZjI0OTlkMzc4YzI0MGRhYzAzMTA4OTcwNGY0Mzc0NzlmNDIxOGM2YzQ3OQ%3D%3D&v=1&f=sd',
-                title: 'TacticalGramma Self-Revive WIN',
-            },
+            'https://v.redd.it/uag4uw003od51/HLS_270.m3u8',
+            // 'https://v.redd.it/ve6y3e9mwvd51/HLS_540.m3u8',
+            // 'https://v.redd.it/c4jkwjd4ysd51/HLS_576.m3u8',
         ]
         const x = await projectFromUrls({
-            urls: urls.map((x) => x.url).slice(0, 2),
+            urls,
         })
         const xml = render(x, {
             doctype: 'fcpxml',

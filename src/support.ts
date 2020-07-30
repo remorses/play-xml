@@ -32,8 +32,8 @@ export function downloadM3u8({
 }): Promise<{ filePath: string; unlink: () => void }> {
     const res = m3u8stream(url, { ...rest })
     directory = directory || os.tmpdir()
-    const filePath = path.resolve(directory, uuid.v4() + '.m3u8')
-    console.log(`downloading to ${filePath}`)
+    const filePath = path.resolve(directory, uuid.v4() + '.mp4')
+    console.log(`downloading '${url}' to '${filePath}'`)
     return new Promise((resolve, reject) => {
         const fileStream = fs.createWriteStream(filePath)
         res.pipe(fileStream)

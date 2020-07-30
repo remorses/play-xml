@@ -1,5 +1,6 @@
 import { Fragment, JSXXML } from 'jsx-xml'
 import * as uuid from 'uuid'
+import path from 'path'
 import { formatBoolean, pathToRef } from '../support'
 import { formatDuration } from '../time'
 
@@ -23,7 +24,7 @@ export const Asset = ({
             <format id={formatId} name={formatName + fps} />
             <asset
                 id={pathToRef(src)}
-                src={src}
+                src={path.isAbsolute(src) ? `file://${src}` : src}
                 start={formatDuration(start)}
                 duration={formatDuration(duration)}
                 hasVideo={formatBoolean(hasVideo)}

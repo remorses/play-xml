@@ -1,4 +1,9 @@
 import RedditAPI from 'snoowrap'
+import path from 'path'
+import { URL } from 'url'
+import { sortBy } from 'lodash'
+import fetch from 'node-fetch'
+import { Parser as M3u8Parser } from 'm3u8-parser'
 
 export async function getRedditVideos({ subreddit, limit = 10 }) {
     var redditConn = new RedditAPI({
@@ -18,15 +23,39 @@ export async function getRedditVideos({ subreddit, limit = 10 }) {
         .getTop({ limit, time: 'day' })
     // await r.fetchUntil({ amount: limit })
 
-    return r
-        .map((x) => {
+    // TODO batch promise.all
+    const res = await Promise.all(
+        r.map(async (x) => {
             if (!x.media?.reddit_video?.hls_url) {
                 return
             }
+            const hslMasterUrl = x.media.reddit_video.hls_url
+            const videoUri = getHighestQualityHslVIdeo(
+                await (await fetch(hslMasterUrl)).text(),
+            )
             return {
-                url: x.media.reddit_video.hls_url,
+                url: new URL(`./${videoUri}`, hslMasterUrl).toString(),
                 title: x.title,
             }
-        })
-        .filter(Boolean)
+        }),
+    )
+    return res.filter(Boolean)
+}
+
+function getHighestQualityHslVIdeo(hslData) {
+    var parser = new M3u8Parser()
+
+    parser.push(hslData)
+    parser.end()
+
+    const { playlists = [] } = parser.manifest
+    // console.log(parser.manifest.playlists[0])
+    if (!playlists || !playlists.length) {
+        throw new Error(`no playlist found in hsl data`)
+    }
+    const highestQuality = sortBy(
+        playlists,
+        (x) => -x?.attributes?.RESOLUTION?.width,
+    )[0]
+    return highestQuality?.uri || ''
 }

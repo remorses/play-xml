@@ -26,6 +26,13 @@
   dependencies:
     "@types/node" "*"
 
+"@types/hls-parser@^0.5.1":
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/@types/hls-parser/-/hls-parser-0.5.1.tgz#df235b25e5c6485e5a9fd817d723acd04354b57c"
+  integrity sha512-zR/nrMMTwY2Wf+fmIK5rKWprMInpiWya4FdNGT+Pp7e2IkuGzKTLq/LDPqyMbrCI201FhKZcfd5vOpQ3T1qAfA==
+  dependencies:
+    "@types/node" "*"
+
 "@types/lodash@^4.14.158":
   version "4.14.158"
   resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.158.tgz#b38ea8b6fe799acd076d7a8d7ab71c26ef77f785"
@@ -850,6 +857,11 @@ he@1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/he/-/he-1.2.0.tgz#84ae65fa7eafb165fddb61566ae14baf05664f0f"
   integrity sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==
+
+hls-parser@^0.6.1:
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/hls-parser/-/hls-parser-0.6.1.tgz#fa5a17e2c6252227975b3d31bd4d5fd9d398fb46"
+  integrity sha512-048QZcCTXJl7AP+294Fk5pKr01AGQr1i5tvZDhn/SL4toF4cByhYD0kszPUbm1G2CiMNJEad1exk+Y8dY9ZZPA==
 
 http-cache-semantics@^4.0.0:
   version "4.1.0"

@@ -17,10 +17,9 @@ describe('support', () => {
     })
     it('downloadM3u8', async () => {
         const res = await downloadM3u8({
-            url: 'https://v.redd.it/uag4uw003od51/HLSPlaylist.m3u8',
-            parser: 'dash-mpd',
+            url: 'https://v.redd.it/uag4uw003od51/HLS_270.m3u8',
         })
-        console.log(res)
+        // console.log(res)
         assert(res.filePath)
         await res.unlink()
     })
