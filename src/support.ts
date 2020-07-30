@@ -1,4 +1,5 @@
 import m3u8stream from 'm3u8stream'
+import { exec } from 'promisify-child-process'
 
 import ffmpeg, { FfprobeData, FfprobeStream } from 'fluent-ffmpeg'
 import fs, { promises as fsp } from 'fs'
@@ -24,7 +25,26 @@ export function pathToRef(p: string) {
     return 'r' + Buffer.from(path.normalize(p)).toString('hex')
 }
 
-export function downloadM3u8({
+export async function downloadM3u8({
+    url,
+    directory = '',
+    silent = false,
+    ...rest
+}): Promise<{ filePath: string; unlink: () => void }> {
+    const filePath = path.resolve(directory, uuid.v4() + '.mp4')
+    console.log(`downloading '${url}' to '${filePath}'`)
+    const child = await exec(`ffmpeg -i '${url}' -c copy '${filePath}'`, {
+        ...rest,
+    })
+    return {
+        filePath,
+        unlink: () => {
+            return fsp.unlink(filePath)
+        },
+    }
+}
+
+export function oldDownloadM3u8({
     url,
     directory = '',
     silent = false,
