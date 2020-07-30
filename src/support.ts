@@ -185,10 +185,10 @@ function computeFormatName(videoStream: FfprobeStream): string {
 
 export function cloneElement(element, props = {}, children = []): JsxElement {
     const ks = Object.keys(element)
-    props = mapKeys(props, (v, k) => `@${k}`)
     if (!ks.length) {
         throw new Error(`element ${element} invalid, no keys`)
     }
+    props = mapKeys(props, (_, k) => `@${k}`)
     const tag = ks[0]
     const oldProps = element[tag][0] || {}
     const newProps = { ...oldProps, ...props }
