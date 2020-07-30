@@ -200,7 +200,7 @@ export function cloneElement(
         [tag]: [
             ...(Object.keys(newProps).length ? [newProps] : []),
             ...element[tag]?.slice?.(1),
-            children,
+            ...children,
         ],
     }
 }
