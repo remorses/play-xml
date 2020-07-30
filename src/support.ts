@@ -3,7 +3,7 @@ import { exec } from 'promisify-child-process'
 
 import ffmpeg, { FfprobeData, FfprobeStream } from 'fluent-ffmpeg'
 import fs, { promises as fsp } from 'fs'
-import { isUndefined } from 'lodash'
+import { isUndefined, mapKeys } from 'lodash'
 import mime from 'mime-types'
 import fetch from 'node-fetch'
 import { sortBy } from 'lodash'
@@ -185,6 +185,7 @@ function computeFormatName(videoStream: FfprobeStream): string {
 
 export function cloneElement(element, props = {}, children = []): JsxElement {
     const ks = Object.keys(element)
+    props = mapKeys(props, (v, k) => `@${k}`)
     if (!ks.length) {
         throw new Error(`element ${element} invalid, no keys`)
     }
