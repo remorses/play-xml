@@ -1,9 +1,6 @@
-import RedditAPI from 'snoowrap'
-import path from 'path'
-import { URL } from 'url'
 import { sortBy } from 'lodash'
-import fetch from 'node-fetch'
 import { Parser as M3u8Parser } from 'm3u8-parser'
+import RedditAPI from 'snoowrap'
 
 export async function getRedditVideos({ subreddit, limit = 10 }) {
     var redditConn = new RedditAPI({
@@ -30,11 +27,11 @@ export async function getRedditVideos({ subreddit, limit = 10 }) {
                 return
             }
             const hslMasterUrl = x.media.reddit_video.hls_url
-            const videoUri = getHighestQualityHslVIdeo(
-                await (await fetch(hslMasterUrl)).text(),
-            )
+            // const videoUri = getHighestQualityHslVIdeo(
+            //     await (await fetch(hslMasterUrl)).text(),
+            // )
             return {
-                url: new URL(`./${videoUri}`, hslMasterUrl).toString(),
+                url:  hslMasterUrl, // new URL(`./${videoUri}`, hslMasterUrl).toString(),
                 title: x.title,
             }
         }),

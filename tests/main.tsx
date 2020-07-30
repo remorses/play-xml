@@ -6,9 +6,9 @@ import fs from 'fs'
 describe('main', () => {
     it('main', async function () {
         const urls = [
-            'https://v.redd.it/uag4uw003od51/HLS_270.m3u8',
-            // 'https://v.redd.it/ve6y3e9mwvd51/HLS_540.m3u8',
-            // 'https://v.redd.it/c4jkwjd4ysd51/HLS_576.m3u8',
+            'https://v.redd.it/uag4uw003od51/HLSPlaylist.m3u8',
+            'https://v.redd.it/ve6y3e9mwvd51/HLSPlaylist.m3u8',
+            'https://v.redd.it/c4jkwjd4ysd51/HLSPlaylist.m3u8',
         ]
         const x = await projectFromUrls({
             urls,

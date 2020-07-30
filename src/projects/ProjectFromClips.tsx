@@ -27,7 +27,7 @@ export const projectFromUrls = async ({ urls, ...rest }) => {
         const { filePath, unlink } = await downloadM3u8({ url,  })
         console.log('finish download of ' + filePath)
         const info = await getVideoInfo(filePath)
-        console.log(info)
+        // console.log(info)
         const {
             format: { duration },
         } = info

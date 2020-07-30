@@ -31,11 +31,15 @@ export async function downloadM3u8({
     silent = false,
     ...rest
 }): Promise<{ filePath: string; unlink: () => void }> {
+    directory = directory || os.tmpdir()
     const filePath = path.resolve(directory, uuid.v4() + '.mp4')
+    // TODO ffmpeg doesnt download highest quality file
     console.log(`downloading '${url}' to '${filePath}'`)
     const child = await exec(`ffmpeg -i '${url}' -c copy '${filePath}'`, {
         ...rest,
     })
+    console.log(child.stdout)
+    console.log(child.stderr)
     return {
         filePath,
         unlink: () => {
