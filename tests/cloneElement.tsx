@@ -9,15 +9,20 @@ describe('cloneElement', () => {
         assert.equal(pretty(element), pretty(cloned))
     })
     it('works with FC elements', () => {
-        const B = ({ x }) => {
+        const B = ({ x, children }) => {
             return (
                 <tag x={x}>
                     <anothertag />
+                    {children}
                 </tag>
             )
         }
         const A = ({ x }) => {
-            return <B x={x} />
+            return (
+                <B x={x}>
+                    <sometag />
+                </B>
+            )
         }
         var element = <A x='3' />
         var cloned = cloneElement(element)
