@@ -11,7 +11,7 @@ import os from 'os'
 import path from 'path'
 import * as uuid from 'uuid'
 import { formatNames } from './constants'
-import { JsxElement } from 'jsx-xml'
+import { JsxElement, JSXNode, Fragment } from 'jsx-xml'
 
 export function formatBoolean(bool) {
     return bool ? '1' : '0'
@@ -183,7 +183,11 @@ function computeFormatName(videoStream: FfprobeStream): string {
     }
 }
 
-export function cloneElement(element, props = {}, children = []): JsxElement {
+export function cloneElement(
+    element: JSXNode,
+    props: Record<string, any> = {},
+    children: JSXNode[] = [],
+): JsxElement {
     const ks = Object.keys(element)
     if (!ks.length) {
         throw new Error(`element ${element} invalid, no keys`)
@@ -196,7 +200,7 @@ export function cloneElement(element, props = {}, children = []): JsxElement {
         [tag]: [
             ...(Object.keys(newProps).length ? [newProps] : []),
             ...element[tag]?.slice?.(1),
-            ...children,
+            children,
         ],
     }
 }
